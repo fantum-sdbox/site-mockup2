@@ -31,9 +31,6 @@
   <link rel="stylesheet" href="assets/css/custom.css">
   <!-- Media Query -->
   <link rel="stylesheet" href="assets/css/mediaquery.css">
-  <!-- Slick -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 
 
 
@@ -282,14 +279,123 @@
                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                 class="fas fa-bars"></i>
                             </button>
+
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#">Issue IC Cards</a>
-                              <a class="dropdown-item" href="#">Settings</a>
+                              <div class="dropdown ICCards-dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="dropdownICCardsButton"
+                                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Issue IC Cards</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownICCardsLink">
+                                  <a class="dropdown-item" href="#">ABC</a>
+                                  <a class="dropdown-item" href="#" >Settings</a>
+                                  <a class="dropdown-item text-danger" href="#">Delete Box</a>
+                                </div>
+                              </div>
+                              <a class="dropdown-item" href="#" data-toggle="modal"
+                              data-target="#SettingsModal">Settings</a>
                               <a class="dropdown-item text-danger" href="#">Delete Box</a>
                             </div>
                           </div>
                           <!-- ./dropdown -->
                         </div>
+                        <!--Settings Modal -->
+                        <div class="modal fade" id="SettingsModal">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <!-- Modal body -->
+                              <div class="modal-body">
+                                <div class="container">
+                                  <h3 class="mb-4">My Home Box Settings</h3>
+                                  <div class="form-row justify-content-between">
+                                    <div class="d-flex col-md-6 justify-content-between ">
+                                      <div class="col">
+                                        <label>Auto Lock Time</label>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                      </div>
+                                      <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                                      </div>
+                                    </div>
+                                    <div class="d-flex col-md-6 justify-content-between">
+                                      <div class="col">
+                                        <label>Keep Open Mode</label>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                      </div>
+                                      
+                                      <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                <div class="border-style"></div>
+                                <div class="form-row justify-content-between">
+                                  <div class="d-flex col-md-6 justify-content-between ">
+                                    <div class="col">
+                                      <label>Temper Alert</label>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                    </div>
+                                    <div>
+                                      <label class="switch" >
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="d-flex col-md-6 justify-content-between">
+                                    <div class="col">
+                                      <label>Reset Lock</label>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                    </div>
+                                    
+                                    <label class="switch">
+                                      <input type="checkbox" checked>
+                                      <span class="slider round"></span>
+                                    </label>
+                                  </div>
+                                  <div class="d-flex col-md-6 justify-content-between">
+                                    <div class="col">
+                                      <label>Unlock Remortly</label>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                    </div>
+                                    
+                                    <label class="switch">
+                                      <input type="checkbox" checked>
+                                      <span class="slider round"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                              <div class="border-style"></div>
+                              <div class="form-row justify-content-between">
+                                <div class="d-flex col-md-6 justify-content-between ">
+                                  <div class="col">
+                                    <label>Lock Sound</label>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                  </div>
+                                  <div>
+                                    <label class="switch" >
+                                      <input type="checkbox" checked>
+                                      <span class="slider round"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="d-flex col-md-6 justify-content-between">
+                                  <div class="col">
+                                    <label>Sync Lock Clock</label>
+                                    <a>12316165145</a>
+                                  </div>
+                                  
+                                  <i class="fas fa-sync"></i>
+                                </div>
+                              </div>
+                                  <div class="d-flex flex-row justify-content-center  mt-3">
+                                    <button class="btnOne">Done</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- modal -->
                         <!-- Modal BOX-->
                         <div class="modal fade cus-modal" id="staticBackdrop" data-backdrop="static"
                           data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -336,7 +442,8 @@
                               aria-expanded="false">Send ekey
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#">One Time</a>
+                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#OneTimeModal">One
+                                Time</a>
                               <a class="dropdown-item" href="#">Timed</a>
                               <a class="dropdown-item" href="#">Permanent</a>
                               <a class="dropdown-item" href="#">Recuring</a>
@@ -344,236 +451,297 @@
                           </div>
                           <!-- ./Dropdown Ekey -->
 
-                          <button class="bttn btn-text-outline font-size-13 text-truncate mr-2">Send passcode</button>
-                          <button class="btnOne font-size-13 text-truncate">Remote Unlock</button>
+                          <!-- Modal -->
+                          <div class="modal fade" id="OneTimeModal">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  <div class="container">
+                                    <h3>One-Time Send Ekey</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                      incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis.
+                                    </p>
+                                    <div class="form-row justify-content-between">
+                                      <div class="form-group col-md-5 ">
+                                        <label for="Recipent">Recipent</label>
+                                        <input type="text" id="Recipent" class="form-control "
+                                          aria-describedby="Recipent" placeholder="Enter Recipent">
+                                      </div>
+                                      <div class="form-group col-md-5">
+                                        <label for="Name">Name</label>
+                                        <input type="text" id="Name" class="form-control " aria-describedby="Name"
+                                          placeholder="Enter Name">
+                                      </div>
+                                    </div>
+                                    <div class="form-row justify-content-between">
+                                      <div class="d-flex col-md-5 justify-content-between ">
+                                        <label>All Remote Unlocking</label>
+                                        <label class="switch">
+                                          <input type="checkbox" checked>
+                                          <span class="slider round"></span>
+                                        </label>
+                                      </div>
+                                      <div class="d-flex col-md-5 justify-content-between">
+                                        <label>All Remote Unlocking</label>
+                                        <label class="switch">
+                                          <input type="checkbox" checked>
+                                          <span class="slider round"></span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-end  mt-5">
+                                      <button class="btnOne">Send EKey</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- modal -->
+
+                          <!-- Dropdown Send passcode -->
+                          <div class="dropdown cus-dropdown">
+                            <button class="bttn btn-text-outline font-size-13 text-truncate mr-2 dropdown-toggle"
+                              type="button" id="dropdownPasscodeButton" data-toggle="dropdown" aria-haspopup="true"
+                              aria-expanded="false">Send passcode</button>
+                            <button class="btnOne font-size-13 text-truncate">Remote Unlock</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownPasscodeButton">
+                              <a class="dropdown-item" href="#">One Time</a>
+                              <a class="dropdown-item" href="#">Timed</a>
+                              <a class="dropdown-item" href="#">Permanent</a>
+                              <a class="dropdown-item" href="#">Recuring</a>
+                            </div>
+                          </div>
+                          <!--End Dropdown Send passcode -->
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- end row -->
             </div>
+            <!-- end row -->
           </div>
-          <!-- ./Box info -->
-          <div class="row">
-            <div class="col-md-12">
-              <div class="custom-nav">
-                <nav class="navbar ">
-                  <ul class="nav nav-pills " id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                        aria-controls="pills-home" aria-selected="true">E-key</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                        aria-controls="pills-profile" aria-selected="false">Passcodes</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                        aria-controls="pills-contact" aria-selected="false">Ic Cards</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                        aria-controls="pills-contact" aria-selected="false">Activity</a>
-                    </li>
+        </div>
+        <!-- ./Box info -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="custom-nav">
+              <nav class="navbar ">
+                <ul class="nav nav-pills " id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                      aria-controls="pills-home" aria-selected="true">E-key</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                      aria-controls="pills-profile" aria-selected="false">Passcodes</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                      aria-controls="pills-contact" aria-selected="false">Ic Cards</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                      aria-controls="pills-contact" aria-selected="false">Activity</a>
+                  </li>
 
-                  </ul>
-                  <!-- <form class="form-inline my-lg-0">
+                </ul>
+                <!-- <form class="form-inline my-lg-0">
                     <select class="form-control bttn form-control-sm">
                       <option>10 Rows</option>
                       <option>5 Rows</option>
                     </select>
 
                   </form> -->
-                </nav>
+              </nav>
 
-                <!-- Nav Details -->
-                <div class="tab-content" id="pills-tabContent">
-                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                    aria-labelledby="pills-home-tab">
-                    <div class="row">
-                      <div class="col-md-12">
+              <!-- Nav Details -->
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                  <div class="row">
+                    <div class="col-md-12">
 
-                        <div class="cus-datatable mt-2">
-                          <!-- Datatable -->
-                          <table id="datatable-buttons" class="table table-striped dt-responsive nowrap"
-                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead>
-                              <tr>
-                                <th>Name</th>
-                                <th>Recipient Account</th>
-                                <th>Assigner</th>
-                                <th>Assigner Time</th>
-                                <th>Validity Period</th>
-                                <th>Status</th>
-                                <th>Operation</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td><span><i class="fas fa-lock mr-2 "></i></span> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
-                                <td>
-                                  <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#">
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-edit"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-trash-alt"></i></li>
-                                    </a>
-                                  </ul>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td><span><i class="fas fa-lock mr-2 "></i></span> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
-                                <td>
-                                  <ul class="list-unstyled d-flex justify-content-center table-icon">
-                                    <a href="#">
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-edit"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-trash-alt"></i></li>
-                                    </a>
-                                  </ul>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td><span><i class="fas fa-lock mr-2 "></i></span> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
-                                <td>
-                                  <ul class="list-unstyled d-flex justify-content-center table-icon">
-                                    <a href="#">
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-edit"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-trash-alt"></i></li>
-                                    </a>
-                                  </ul>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td><span><i class="fas fa-lock mr-2 "></i></span> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
-                                <td>
-                                  <ul class="list-unstyled d-flex justify-content-center table-icon">
-                                    <a href="#">
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-edit"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-trash-alt"></i></li>
-                                    </a>
-                                  </ul>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td><span><i class="fas fa-lock mr-2 "></i></span> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
-                                <td>
-                                  <ul class="list-unstyled d-flex justify-content-center table-icon">
-                                    <a href="#"></a>
+                      <div class="cus-datatable mt-2">
+                        <!-- Datatable -->
+                        <table id="datatable-buttons" class="table table-striped dt-responsive nowrap"
+                          style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                          <thead>
+                            <tr>
+                              <th>Name</th>
+                              <th>Recipient Account</th>
+                              <th>Assigner</th>
+                              <th>Assigner Time</th>
+                              <th>Validity Period</th>
+                              <th>Status</th>
+                              <th>Operation</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><span><i class="fas fa-lock mr-2 "></i></span> Alex Freeman</td>
+                              <td>ryangordon@test.com</td>
+                              <td>Fantum</td>
+                              <td class="text-turncate"> 01:47 15 APR 2021</td>
+                              <td>2009/09/15</td>
+                              <td>Active</td>
+                              <td>
+                                <ul class="list-unstyled d-flex table-icon justify-content-center">
+                                  <a href="#">
                                     <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-edit"></i></li>
-                                    </a>
-                                    <a href="#">
-                                      <li><i class="fas fa-trash-alt"></i></li>
-                                    </a>
-                                  </ul>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-share-alt"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-edit"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-trash-alt"></i></li>
+                                  </a>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span><i class="fas fa-lock mr-2 "></i></span> Alex Freeman</td>
+                              <td>ryangordon@test.com</td>
+                              <td>Fantum</td>
+                              <td class="text-turncate"> 01:47 15 APR 2021</td>
+                              <td>2009/09/15</td>
+                              <td>Active</td>
+                              <td>
+                                <ul class="list-unstyled d-flex justify-content-center table-icon">
+                                  <a href="#">
+                                    <li><i class="fas fa-eye"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-share-alt"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-edit"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-trash-alt"></i></li>
+                                  </a>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span><i class="fas fa-lock mr-2 "></i></span> Alex Freeman</td>
+                              <td>ryangordon@test.com</td>
+                              <td>Fantum</td>
+                              <td class="text-turncate"> 01:47 15 APR 2021</td>
+                              <td>2009/09/15</td>
+                              <td>Active</td>
+                              <td>
+                                <ul class="list-unstyled d-flex justify-content-center table-icon">
+                                  <a href="#">
+                                    <li><i class="fas fa-eye"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-share-alt"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-edit"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-trash-alt"></i></li>
+                                  </a>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span><i class="fas fa-lock mr-2 "></i></span> Alex Freeman</td>
+                              <td>ryangordon@test.com</td>
+                              <td>Fantum</td>
+                              <td class="text-turncate"> 01:47 15 APR 2021</td>
+                              <td>2009/09/15</td>
+                              <td>Active</td>
+                              <td>
+                                <ul class="list-unstyled d-flex justify-content-center table-icon">
+                                  <a href="#">
+                                    <li><i class="fas fa-eye"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-share-alt"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-edit"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-trash-alt"></i></li>
+                                  </a>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><span><i class="fas fa-lock mr-2 "></i></span> Alex Freeman</td>
+                              <td>ryangordon@test.com</td>
+                              <td>Fantum</td>
+                              <td class="text-turncate"> 01:47 15 APR 2021</td>
+                              <td>2009/09/15</td>
+                              <td>Active</td>
+                              <td>
+                                <ul class="list-unstyled d-flex justify-content-center table-icon">
+                                  <a href="#"></a>
+                                  <li><i class="fas fa-eye"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-share-alt"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-edit"></i></li>
+                                  </a>
+                                  <a href="#">
+                                    <li><i class="fas fa-trash-alt"></i></li>
+                                  </a>
+                                </ul>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
 
-                          <!-- Datatable -->
-                        </div>
+                        <!-- Datatable -->
                       </div>
                     </div>
+                  </div>
 
-                  </div>
-                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    ...
-                  </div>
-                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                    ...
-                  </div>
                 </div>
-
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                  ...
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  ...
+                </div>
               </div>
-            </div>
 
+            </div>
           </div>
 
+        </div>
 
-          <!-- ./Body-box -->
-        </div> <!-- container-fluid -->
-      </div>
-      <!-- End Page-content -->
 
-      <footer class="footer login-footer">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="text-sm-center d-sm-block mt-2">
-                <p>Fantum © 2021 - All Rights Reserved | <span><a href="#">Terms & Policy</a></span> | <span><a
-                      href="#">Privacy
-                      Policy</a></span></p>
-              </div>
+        <!-- ./Body-box -->
+      </div> <!-- container-fluid -->
+    </div>
+    <!-- End Page-content -->
+
+    <footer class="footer login-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="text-sm-center d-sm-block mt-2">
+              <p>Fantum © 2021 - All Rights Reserved | <span><a href="#">Terms & Policy</a></span> | <span><a
+                    href="#">Privacy
+                    Policy</a></span></p>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-    <!-- end main content-->
+      </div>
+    </footer>
+  </div>
+  <!-- end main content-->
 
   </div>
   <!-- END layout-wrapper -->
@@ -598,6 +766,11 @@
 
   <script src="assets/js/app.js"></script>
   <script src="assets/js/custom.js"></script>
+
+  <!-- quantity box  -->
+  <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
 
 </body>
 
