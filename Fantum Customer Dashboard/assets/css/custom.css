@@ -132,7 +132,7 @@ a {
 
 .btn-gradient {
   width: 70%;
-  height: 25px;
+  height: 35px;
   background: linear-gradient(90deg, rgba(85, 197, 227, 1) 50%, rgba(224, 238, 241, 1) 100%);
   border: 0px transparent;
   border-radius: 0;
@@ -142,17 +142,13 @@ a {
   padding: 1px 6px;
   font-size: auto;
   margin-top: 4px;
+  padding-left: 15px;
 }
 
 .btn.focus,
 .btn:focus {
   outline: 0 !important;
   box-shadow: none !important;
-}
-
-.card-border {
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
 }
 
 /* ==============================================================-->< !--  DashBoard Navbar Css-->< !--==============================================================*/
@@ -707,7 +703,7 @@ Footer+Login Footer
   margin-bottom: 2%;
 }
 /* activites */
-.list-unstyled .btnOne{
+.list-unstyled .tag{
   min-width: 90px;
   height: 25px;
   margin-top: 5px;
@@ -716,6 +712,8 @@ Footer+Login Footer
   margin-right: 2%;
   background-color: #F2F2F2;
   color: #000000;
+  border-radius: 20px;
+  text-align: center;
 }
 
 /* searchbar */

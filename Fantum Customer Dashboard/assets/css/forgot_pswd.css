@@ -1,0 +1,56 @@
+ /* forgot pswd */
+
+ #forgot_pswd h2, label{
+     font-weight: 900;
+     color: black;
+ }
+.bttn1 {
+    width: 150px;
+    height: 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    line-height: initial;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+  }
+  .bttn1-primary {
+    background-color: var(--primary-color);
+    border: 1px solid transparent;
+    color: var(--white);
+  }
+  .bttn1:after{content: "proceed";}
+  .bttn1:hover::after{content: "Log In";}
+  .card-border {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+  
+  .sendOTP .btn{
+    width: 150px;
+    height: 35px;
+    font-weight: bold;
+    line-height: initial;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+  }
+  #forgot_pswd .bttn {
+    width: 150px;
+    height: 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    line-height: initial;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+  }
+  .bttn-primary {
+    background-color: var(--primary-color);
+    border: 1px solid transparent;
+    color: var(--white);
+  }
+  
+  .bttn-primary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+   
