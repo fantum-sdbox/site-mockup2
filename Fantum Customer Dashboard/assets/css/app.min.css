@@ -32,11 +32,13 @@
 
 .navbar-brand-box {
   padding: 0 1.5rem;
-  width: 240px
+  width: 240px;
+  
 }
 
 .logo {
   line-height: 62px;
+  
 }
 
 .logo .logo-sm {
@@ -586,7 +588,9 @@ body[data-layout=horizontal] .footer {
 .vertical-collpsed .vertical-menu #sidebar-menu .badge,
 .vertical-collpsed .vertical-menu #sidebar-menu .collapse.in,
 .vertical-collpsed .vertical-menu #sidebar-menu .menu-title {
-  display: none !important;
+  /* display: none !important; */
+  font-size:xx-small;
+  
 }
 
 .vertical-collpsed .vertical-menu #sidebar-menu .nav.collapse {
