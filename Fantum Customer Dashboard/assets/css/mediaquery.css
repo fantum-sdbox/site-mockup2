@@ -84,7 +84,7 @@
 /* // Extra large devices (large desktops, 1500px and up) */
 @media (min-width: 1500px) {
   .card-box-img{
-    width: 70%;
+    width: 180px;
   }
   .owner-detail{
     margin-top: 3%;
