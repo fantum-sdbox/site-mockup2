@@ -743,7 +743,7 @@ Footer+Login Footer
   margin-top: 3%;
   margin-bottom: 2%;
 }
-/* activites */
+/* ==================activites pg==================== */
 .list-unstyled .tag{
   min-width: 90px;
   height: 25px;
@@ -943,4 +943,158 @@ Footer+Login Footer
  .quantity.buttons_added .plus:focus {
   outline: none; }
  
- 
+/* =====================================Refer&Earn pg================================== */
+.ReferAndEarn-title h4 {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-top: 1%;
+}
+.ReferAndEarn-nav .nav-pills .nav-link h5{
+  text-align:center;
+  font-weight:900;
+}
+.ReferAndEarn-nav .nav-pills .nav-link h6{
+  font-size:12px;
+}
+/* card */
+.ReferAndEarn-card{
+  height:200px;
+  overflow:hidden;
+  padding-top:3%;
+}
+.ReferAndEarn-card .card-body {
+  padding: 5px;
+}
+.ReferAndEarn-card .img-fluid {
+  width: 50%;
+  height: auto;
+}
+/* card heading */
+.ReferAndEarn-card-title label{
+  font-size:15px; 
+  font-weight:900;
+  text-transform: uppercase;
+  /* margin-top:6%;  */
+}
+.ReferAndEarn-card p {
+  font-size: small;
+}
+.ReferAndEarn-card .ShareApp{
+  border-left:2px solid #55C5E3;
+  padding-left:3%;
+}
+.ReferAndEarn-nav .nav {
+  background-color: var(--white);
+  width: fit-content;
+  border-radius: 8px;
+}
+
+.ReferAndEarn-nav .nav-pills .nav-link {
+  min-width: 100px;
+  text-align: center;
+  transition: all 0s ease-in-out;
+  text-transform: uppercase;
+}
+
+.ReferAndEarn-nav .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  width: 50px;
+  text-align: center;
+  margin:5px;
+}
+
+/* btn append */
+.form-right p {
+  font-weight: 600;
+}
+
+.form-right .form-control {
+  height:30px;
+  border-radius: 20px;
+  border:none;
+  box-shadow: var(--login-box-shadow);
+}
+
+.form-right .form-control:focus {
+  outline: transparent !important;
+  box-shadow: none;
+}
+.form-right .btn-append {
+  border-radius: 50px;
+  background: var(--primary-color);
+  border: 1px solid transparent;
+  margin-left: -15px;
+  z-index: 11;
+  color: #fff;
+  transition: .4s all ease;
+  z-index: 11;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  color: #fff;
+  transition: .4s all ease;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  outline: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.form-right .input-group>.input-group-append>.btn {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  font-size: 14px;
+  width: 150px;
+  height:30px;
+  padding-top: 5px;
+}
+
+.form-right .btn-append:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 1;
+  -webkit-transform: translate(-105%, 0);
+  transform: translate(-105%, 0);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #fff !important;
+
+}
+
+.form-right .btn-append:hover:before {
+  opacity: 0;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.form-right .btn-append:hover {
+  color: #fff !important;
+}
+.form-right .btn-append:focus {
+  box-shadow: none;
+}
+/* share btn */
+.ReferAndEarn-card .btnOne {
+  min-width: 140px;
+  margin-left:9%;
+  height:30px;
+}

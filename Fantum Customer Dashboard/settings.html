@@ -22,7 +22,10 @@
     <!-- Slick -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- flags -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
 
 </head>
 
@@ -132,7 +135,7 @@
 
                         <li class="text-center mt-5 refer">
                             <div class="refer-friend">
-                                <a href="#">
+                                <a href="Refer&Earn.html">
                                     <img src="assets/images/home/refer-friend.png" class="img-fluid" alt="">
                                 </a>
                                 <h5>Invite Your Friends</h5>
@@ -222,13 +225,23 @@
                             <div class="col-12 mb-0">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
                                     <h4>Settings And Preferences</h4>
-                                    <div class="searchbar float-right">
+                                    <!-- <div class="searchbar float-right">
                                         <input class="search_input" type="text" name="" placeholder="Search...">
                                         <a href="#" class="search_icon"><i class="fas fa-search float-right"></i></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
+                        <select class="selectpicker" data-width="fit">
+                            <option data-content=' English'><span class="flag-icon flag-icon-us"></span>English</option>
+                          <option  data-content='Español'><span class="flag-icon flag-icon-mx"></span> Español</option>
+                        </select>
+                        <!-- <label class="mr-5" for="language">Language </label>
+                        <select name="countries" id="language">
+                        <option value="english" data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag english" data-title="english">English</option>
+                        <option value="hindi" data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag hindi" data-title="hindi">Hindi</option>
+                        <option value="spanish" data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag spanish" data-title="spanish">Spanish</option>
+                        </select> -->
                         <!-- end page title -->
                         <!-- body box -->
                         
@@ -242,6 +255,11 @@
     </div><!-- layout-wrapper -->
     
     <!-- JAVASCRIPT -->
+    <script type='text/javascript'>
+        $(function(){
+        $('.selectpicker').selectpicker();
+        });
+      </script>
 	<script src="assets/libs/jquery/jquery.min.js"></script>
 	<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -250,6 +268,11 @@
 	<script src="assets/libs/node-waves/waves.min.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="assets/js/custom.js"></script>
+    <!-- flag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
