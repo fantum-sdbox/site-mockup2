@@ -20,7 +20,10 @@
   box-sizing: border-box;
 }
 
-
+html{
+  font-family: 'Nunito',
+    sans-serif !important;
+}
 body {
   font-family: 'Nunito',
     sans-serif;
@@ -1098,3 +1101,89 @@ Footer+Login Footer
   margin-left:9%;
   height:30px;
 }
+/* settings pg */
+.vodiapicker{
+  display: none; 
+}
+
+#a{
+  padding-left: 0px;
+}
+
+#a img, .btn-select img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+#a li{
+  list-style: none;
+  padding-top: 5px;
+  /* padding-bottom: 5px; */
+  background-color: #fff;
+  
+}
+
+#a li:hover{
+ background-color: var(--light-blue);
+}
+
+#a li img{
+  margin: 5px;
+  margin-left: 15px;
+}
+
+#a li span, .btn-select li span {
+  margin-left: 20px;
+}
+
+/* item list */
+
+.b {
+  display: none;
+  width: 100%;
+  max-width: 150px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 20px;
+  padding-top: 15px;
+  padding-bottom: -10px;
+  background-color: #fff;
+  
+}
+
+.open{
+  display: show !important;
+}
+
+.btn-select {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 150px;
+  height: 34px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+ 
+}
+.btn-select li{
+  list-style: none;
+  float: left;
+  padding-bottom: 0px;
+}
+
+.btn-select:hover li{
+  margin-left: 0px;
+}
+
+.btn-select:hover{
+  background-color: #F4F3F3;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0px 0px 1px #ccc;
+  
+  
+}
+
+.btn-select:focus{
+   outline:none;
+}
+
