@@ -38,7 +38,7 @@
 
 .logo {
   line-height: 62px;
-  
+  margin-top: 20px;
 }
 
 .logo .logo-sm {
@@ -282,9 +282,9 @@ body[data-layout=horizontal] .page-content {
 }
 
 .page-title-box h4 {
-  font-size: 15px;
+  font-size: 19px;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 600;
   color: #000;
 }
 
@@ -4728,4 +4728,10 @@ div.dt-button-info h2 {
     left: -12px;
     bottom: 38px
   }
+}
+.refer-friend h5{
+  font-weight: 600;
+}
+.mm-active span{
+  font-weight: 600;
 }

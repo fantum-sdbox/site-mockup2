@@ -145,3 +145,8 @@ if (sessionLang){
   $('.btn-select').html(langArray[langIndex]);
   //$('.btn-select').attr('value', 'en');
 }
+
+// profile pg
+$("#profileImage").click(function(e) {
+  $("#imageUpload").click();
+});

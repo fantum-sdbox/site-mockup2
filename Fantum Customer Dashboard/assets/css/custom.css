@@ -20,13 +20,13 @@
   box-sizing: border-box;
 }
 
-html{
+/* html{
   font-family: 'Nunito',
-    sans-serif !important;
-}
+    sans-serif ;
+} */
 body {
   font-family: 'Nunito',
-    sans-serif;
+    sans-serif !important;
   font-size: 16px;
   background: var(--light-blue);
 }
@@ -135,7 +135,7 @@ a {
 }
 
 .btn-gradient {
-  width: 70%;
+  width: 80%;
   height: 35px;
   background: linear-gradient(90deg,rgba(85, 197, 227, 1) 50%, rgb(255 255 255) 100%);
   border: 0px transparent;
@@ -370,7 +370,20 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
   border-radius: 50%;
   box-shadow: var(--box-shadow);
 }
+.Profile-title {
+  font-size: 15px;
+  font-weight: 900;
+  margin-left:18px;
+}
+#imageUpload
+{
+    display: none;
+}
 
+#profileImage
+{
+    cursor: pointer;
+}
 /* ===========
  Notification Dashboard
 ==============*/
@@ -792,8 +805,8 @@ Footer+Login Footer
     background: linear-gradient(90deg,rgba(85, 197, 227, 1) 50%, rgb(224 238 241) 100%);
   }
   /* Add-box page */
-  #OneTimeModal h3,label{
-    font-weight: 900;
+  #OneTimeModal h3, label {
+    font-weight: 600;
     color: #000000;
   }
   #OneTimeModal p{
@@ -867,7 +880,7 @@ Footer+Login Footer
     } 
     /* SettingsModal */
     #SettingsModal h3,label{
-      font-weight: 900;
+      font-weight: 600;
       color: #000000;
     }
     #SettingsModal p{
@@ -952,6 +965,7 @@ Footer+Login Footer
   text-transform: uppercase;
   font-weight: 900;
   margin-top: 1%;
+  color: #000000;
 }
 .ReferAndEarn-nav .nav-pills .nav-link h5{
   text-align:center;
@@ -1019,6 +1033,7 @@ Footer+Login Footer
   border-radius: 20px;
   border:none;
   box-shadow: var(--login-box-shadow);
+  width: 260px;
 }
 
 .form-right .form-control:focus {
@@ -1186,4 +1201,12 @@ Footer+Login Footer
 .btn-select:focus{
    outline:none;
 }
-
+.social-media-icon{
+  margin-top: 7px;
+  width: 30px;
+  height: 30px;
+}
+/* add-box */
+.add-box-card{
+  width: 1100px;
+}
