@@ -24,8 +24,83 @@
   <!-- Slick -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  
+<style>
+  .uploadcare--widget__button {
+  min-width: 180px;
+  height: 35px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff !important;
+  transition: .4s all ease;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  background: var(--primary-color);
+  cursor: pointer;
+  outline: 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10%;
+  }
+  .uploadcare--widget__button_type_open:focus, .uploadcare--widget__button_type_open:hover {
+    background:  var(--primary-color);
+}
+  .uploadcare--jcrop-holder>div>div, #preview {
+  border-radius: 50%;
+}
 
-
+/* Styles and stuff for the page */
+#preview {
+  margin-top: 1rem;
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    /* overflow-y: auto; */
+}
+.modal {
+    position: fixed;
+    top: 5%;
+    left: 45%;
+    z-index: 1050;
+    display: none;
+    width: 320px;
+    /* height: 100%; */
+    overflow: hidden;
+    outline: 0;
+}
+.modal-dialog {
+    margin: 0;
+}
+.otp-modal .rounded {
+    border-radius: 50% !important;
+}
+.otp-box{
+  width:40px; 
+  height:40px;
+  /* background-color: white; */
+  border: 4px solid var(--white);
+  box-shadow: rgb(105 115 125 / 44%) 0px 2px 15px;;
+}
+.otp-modal p{
+  color:gray;
+  font-size:small; 
+  text-align:center; 
+  margin:auto;
+}
+.otp-modal .btnOne {
+    min-width: 150px;
+    margin-top: 15px;
+}
+</style>
 </head>
 
 <body data-sidebar="dark">
@@ -231,15 +306,27 @@
           <div class="row ">
             <div class="col-md-12">
               <div class="row">
-                <div class="col-md-4">
-                  <div class="profile-img text-center ">
+                <div class="col-md-4 text-center">
+                  <script>
+                    UPLOADCARE_PUBLIC_KEY = "demopublickey";
+                  </script>
+                  <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js" charset="utf-8"></script>
+                  
+                  <!-- Your preview will be put here -->
+                  <div class="profile-img text-center">
+                    <img  src="assets/images/home/Rectangle 130.png" alt="" id="preview" />
+                  </div>
+                  <!-- The input element below will turn into the widget -->
+                  <input type="hidden" role="uploadcare-uploader" data-crop="1:1" data-images-only >
+                  <!-- <div class="profile-img text-center ">
                     <img id="profileImage" src="assets/images/home/Rectangle 130.png" alt="user">
                     <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
 
                     <button class="btnOne text-truncate text-center mt-3">Change Profile Img</button>
-                  </div>
+                  </div> -->  
                 </div>
 
+                <!-- General Section & Contact Section -->
                 <div class="col-md-8">
                   <div class="row ">
                     <h5 class="Profile-title">General Section & Contact Section:</h5>
@@ -263,7 +350,6 @@
                             </div>
                           </div>
                         </div>
-
                         <div class="form-row login-form mt-3">
                           <div class="col ">
                             <label for="exampleInputEmail1" class="ml-2 font-size-14">Email address</label>
@@ -287,10 +373,7 @@
                     </div>
                   </div>
                 </div>
-
-
               </div>
-
               <div class="row mt-3 mb-5">
                 <h5 class="Profile-title">Address Section:</h5>
                 <div class="col-md-12">
@@ -336,19 +419,45 @@
                         </div>
                       </div>
                     </div>
-
-                    <div class="row mt-5 text-center">
-                      <div class="col">
-                        <button type="submit" class="bttn btn-text-outline">Change Password</button>
-                        <button type="submit" class="btnOne ml-3">Submit</button>
-                      </div>
-                    </div>
                   </form>
+                  <!-- buttons -->
+                  <div class="row mt-5 text-center">
+                    <div class="col">
+                      <button class="bttn btn-text-outline" data-toggle="modal" href="#ChangePswdModal">Change Password</button>
+                       <!-- Modal -->
+                      <div class="modal fade" id="ChangePswdModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <div class="otp-modal container">
+                               <h5 class="mb-4">Change Password</h5>
+                               <p style="font-size: 12px; margin-bottom: auto; color:black">OTP Code</p>
+                                <div class="input-container d-flex flex-row justify-content-center mt- 2">
+                                  <input type="text" class="otp-box m-1 text-center form-control rounded" maxlength="1">
+                                  <input type="text" class="otp-box m-1 text-center form-control rounded" maxlength="1">
+                                  <input type="text" class="otp-box m-1 text-center form-control rounded" maxlength="1">
+                                  <input type="text" class="otp-box m-1 mb-3 text-center form-control rounded" maxlength="1">
+                                </div>
+                                <p >Don't receive the code ?</p>
+                                <a style="color: red;" class="d-flex flex-row justify-content-center">Resend</a>
+                               <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                               <button class="btnOne">Done</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- modal -->
+                      <button type="submit" class="btnOne ml-3">Submit</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
+          
+       
 
           <!-- ./Body-box -->
         </div> <!-- container-fluid -->
@@ -384,7 +493,18 @@
   <script src="assets/js/app.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  // Getting an instance of the widget.
+const widget = uploadcare.Widget('[role=uploadcare-uploader]');
+// Selecting an image to be replaced with the uploaded one.
+const preview = document.getElementById('preview');
+// "onUploadComplete" lets you get file info once it has been uploaded.
+// "cdnUrl" holds a URL of the uploaded file: to replace a preview with.
+widget.onUploadComplete(fileInfo => {
+  preview.src = fileInfo.cdnUrl;
+});
 
+</script>
 </body>
 
 </html>
