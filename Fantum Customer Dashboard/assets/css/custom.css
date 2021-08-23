@@ -522,7 +522,7 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
   background-color: var(--white);
   border-radius: 8px;
   box-shadow: var(--login-box-shadow);
-
+  padding: 8px;
 }
 
 .notification-tab ul li {
