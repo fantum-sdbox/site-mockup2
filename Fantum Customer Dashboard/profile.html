@@ -346,36 +346,9 @@
                   <!-- buttons -->
                   <div class="row mt-5 text-center">
                     <div class="col">
-                      <button class="bttn btn-text-outline" data-toggle="modal" data-target="#OTPModal">Change
+                      <button class="bttn btn-text-outline" data-toggle="modal" data-target="#ChangePswdModal" >Change
                         Password</button>
                         
-                      <!--OTP Modal -->
-                      <div class="modal fade" id="OTPModal">
-                        <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                              <div class="otp-modal container">
-                                <h5 class="mb-4">Change Password</h5>
-                                <p style="font-size: 12px; margin-bottom: auto; color:black">OTP Code</p>
-                                <div class="input-container d-flex flex-row justify-content-center mt- 2">
-                                  <input type="text" class="otp-box m-1 text-center form-control rounded" maxlength="1">
-                                  <input type="text" class="otp-box m-1 text-center form-control rounded" maxlength="1">
-                                  <input type="text" class="otp-box m-1 text-center form-control rounded" maxlength="1">
-                                  <input type="text" class="otp-box m-1 mb-3 text-center form-control rounded"
-                                    maxlength="1">
-                                </div>
-                                <p>Don't receive the code ?</p>
-                                <a style="color: red;" class="d-flex flex-row justify-content-center">Resend</a>
-                                <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                  do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                                <button class="btnOne" data-dismiss="modal" data-toggle="modal" data-target="#ChangePswdModal" class="form-check-label">Done</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- OTP modal -->
                       <button type="submit" class="btnOne ml-3">Submit</button>
                     </div>
                   </div>
@@ -388,12 +361,26 @@
                           <div class="otp-modal container">
                             <h5 class="mb-4 text-center">Change Password</h5>
                             <label >Old Password:</label>
-                            <input class="Inputpswd" type="password" maxlength="15">
+                            <div class="input-box form-icon mb-3">
+                              <input type="text" placeholder="Old Password">
+                              <i class="far fa-eye"></i>
+                            </div>
+                            <label >New Password:</label>
+                            <div class="input-box form-icon mb-3">
+                              <input type="text" placeholder="New Password">
+                              <i class="far fa-eye"></i>
+                            </div>
+                            <label >Confirm Password:</label>
+                            <div class="input-box form-icon mb-3">
+                              <input type="text" placeholder="Confirm Password">
+                              <i class="far fa-eye"></i>
+                            </div>
+                            <!-- <input class="Inputpswd" type="password" maxlength="15" >
                             <label >New Password:</label> 
                             <input class="Inputpswd" type="password" maxlength="15">
                             <label >Confirm Password:</label>
-                            <input class="Inputpswd" type="password" maxlength="15">
-                            <div class="text-center">
+                            <input class="Inputpswd" type="password" maxlength="15"> -->
+                            <div class="modaldonebtn text-center">
                               <button class="btnOne">Done</button>
                             </div>
                           </div>

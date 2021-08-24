@@ -445,53 +445,12 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
   width: 300px;
 }
 
-.otp-modal .rounded {
-  border-radius: 50% !important;
-}
-
-.otp-box {
-  width: 40px;
-  height: 40px;
-  /* background-color: /white; */
-  border: 4px solid white;
-  box-shadow: rgb(105 115 125 / 44%) 0px 2px 15px;
-
-}
-
-.otp-box:hover,
-.otp-box:active,
-.otp-box::before,
-.otp-box::after {
-  box-shadow: rgb(105 115 125 / 44%) 0px 2px 15px;
-  border: none;
-}
-
-.otp-modal p {
-  color: gray;
-  font-size: small;
-  text-align: center;
-  margin: auto;
-}
-
-.otp-modal .btnOne {
-  min-width: 150px;
-  margin-top: 15px;
-}
-
 .uploadcare--button_primary {
   background: var(--primary-color);
   border-color: var(--primary-color);
 }
-.Inputpswd{
-  border-radius: 20px;
-  box-shadow: rgb(105 115 125 / 44%) 0px 2px 15px;
-  border: none;
-  width: -webkit-fill-available;
-  margin-bottom: 6%;
-  outline: none;
-  padding-left: 15px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+.modaldonebtn .btnOne{
+  min-width: 150px;
 }
 
 /* ===========
