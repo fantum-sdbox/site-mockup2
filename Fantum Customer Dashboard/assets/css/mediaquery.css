@@ -45,6 +45,21 @@
   }
 
 }
+@media (min-width: 576px) {
+  #OneTimeModal .modal-dialog {
+  max-width: 750px;  
+}
+#HowToAddModal .modal-dialog {
+  max-width: 750px;
+}
+#SettingsModal .modal-dialog {
+  max-width: 750px;
+}
+#TechnicalSupportModal .modal-dialog {
+  max-width: 300px;
+  border-radius: 50px;
+}
+}
 
 
 /* // Medium devices (tablets, 768px and up) */

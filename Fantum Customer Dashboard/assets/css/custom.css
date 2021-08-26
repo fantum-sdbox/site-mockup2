@@ -154,6 +154,9 @@ a {
   outline: 0 !important;
   box-shadow: none !important;
 }
+.btn-gradient:hover{
+  color:#fff;
+}
 
 /* ==============================================================-->< !--  DashBoard Navbar Css-->< !--==============================================================*/
 body[data-sidebar=dark] .navbar-brand-box {
@@ -327,7 +330,9 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
   color: #fff;
   /* line-height: 2.3; */
 }
-
+.card-btn{
+  margin-bottom: 15px;
+}
 .remote-icon img {
   width: 40%;
   margin: auto;
@@ -425,7 +430,7 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
   margin-top: 1rem;
 }
 
-.modal-open .modal {
+#ChangePswdModal .modal-open .modal {
   overflow-x: hidden;
   /* overflow-y: auto; */
 }
@@ -440,7 +445,7 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
   overflow: hidden;
   outline: 0;
 } */
-.modal-dialog {
+#ChangePswdModal .modal-dialog {
   margin-left: 45%;
   width: 300px;
 }
@@ -456,6 +461,11 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
 /* ===========
  Notification Dashboard
 ==============*/
+.notification-nav .navbar {
+  padding-right: 1rem;
+  padding-bottom: 15px;
+  padding-left: 0;
+}
 .custom-nav .nav {
   background-color: var(--white);
   width: fit-content;
@@ -482,6 +492,8 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
   border-radius: 8px;
   box-shadow: var(--login-box-shadow);
   padding: 8px;
+  margin-top: 15px;
+  margin-right: 15px;
 }
 
 .notification-tab ul li {
@@ -795,35 +807,36 @@ Subscription Details
 .collapsible-link[aria-expanded='true']::before {
   content: '\f106';
 }
-
+.accordion .shadow-sm {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+#accordionExample .card-body{
+  padding: 0;
+  padding-left: 33px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
 
 /* FAQ */
-.custom-nav
-/* ===========
-Footer+Login Footer
-==============*/
-.login-footer {
-  background-color: var(--secondary-color);
-  color: var(--white);
-  padding: 10px 0;
+/* .custom-nav */
+.faq-nav .navbar {
+  padding-right: 1rem;
+  padding-bottom: 15px;
+  padding-left: 0;
 }
 
-.login-footer a {
-  color: var(--primary-color);
-}
 
-.login-footer a:hover {
-  color: var(--white);
-}
+
 /* add-box */
-.modal-dialog {
+#HowToAddModal .modal-dialog {
   max-width: 750px;
   margin: 2rem auto;
 }
-.modal-dialog h3,h6{
+#HowToAddModal .modal-dialog h3,h6{
   font-weight: 900;
 }
-.modal-dialog h5{
+#HowToAddModal .modal-dialog h5{
   font-weight: 900;
   margin-top: 3%;
   margin-bottom: 2%;

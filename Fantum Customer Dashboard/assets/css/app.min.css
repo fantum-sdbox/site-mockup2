@@ -293,14 +293,21 @@ body[data-layout=horizontal] .page-content {
   padding: 20px calc(24px / 2);
   position: absolute;
   right: 0;
-  color: #74788d;
+  color: #fff;
   left: 240px;
   height: 60px;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
-  background-color: #fff
+  -webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+  background-color: #707070;
+}
+.login-footer span a {
+  color: White;
+  font-weight: 900;
 }
 
+.login-footer a:hover {
+  color: var(--white);
+}
 @media (max-width:992px) {
   .footer {
     left: 0
