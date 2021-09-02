@@ -366,7 +366,7 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
 
 /* ===========Profile Dashboard
 ==============*/
-.profile-img img {
+/* .profile-img img {
   width: 150px;
   height: 150px;
   display: block;
@@ -388,8 +388,8 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
 #profileImage
 {
     cursor: pointer;
-}
-.uploadcare--widget__button {
+} */
+/* .uploadcare--widget__button {
   min-width: 180px;
   height: 35px;
   border: 1px solid transparent;
@@ -423,7 +423,7 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
 .uploadcare--jcrop-holder>div>div,
 #preview {
   border-radius: 50%;
-}
+} */
 
 /* Styles and stuff for the page */
 #preview {
@@ -450,10 +450,10 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
   width: 300px;
 }
 
-.uploadcare--button_primary {
+/* .uploadcare--button_primary {
   background: var(--primary-color);
   border-color: var(--primary-color);
-}
+} */
 .modaldonebtn .btnOne{
   min-width: 150px;
 }
@@ -859,11 +859,10 @@ Subscription Details
 .searchbar{
   margin-bottom: auto;
   margin-top: auto;
-  height: 30px;
+  height: 38px;
   background-color: white;
   border-radius: 30px;
-  padding: 6px;
-  place-content: "hello";
+  padding: 9px;
   }
 
   .search_input{
@@ -894,11 +893,8 @@ Subscription Details
   #OneTimeModal p{
     font-size:small;
   }
-  #OneTimeModal .form-control{
-    border-radius: var(--border-radius);
-    border: 0;
-    box-shadow: var(--login-box-shadow);
-  }
+ 
+
   /* Rounded toggle_btns */
   .switch {
       position: relative;
@@ -1045,7 +1041,7 @@ Subscription Details
 .ReferAndEarn-title h4 {
   font-size: 15px;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
   margin-top: 1%;
   color: #000000;
 }
@@ -1072,7 +1068,7 @@ Subscription Details
 /* card heading */
 .ReferAndEarn-card-title label{
   font-size:15px; 
-  font-weight:900;
+  font-weight:700;
   text-transform: uppercase;
   /* margin-top:6%;  */
 }
@@ -1291,4 +1287,39 @@ Subscription Details
 /* add-box */
 .add-box-card{
   width: 1100px;
+}
+.subcrip-sec-box .form-control {
+  border-radius: var(--border-radius);
+  border: 0;
+  box-shadow: var(--login-box-shadow);
+}
+.subcrip-sec-box  input, optgroup, select, textarea {
+  border-radius: var(--border-radius);
+  border: 0;
+  box-shadow: var(--login-box-shadow);
+  padding: 6px 14px 6px 15px;
+  color: gray;
+}
+
+#RecurringModal .Recurring-select input, optgroup, select, textarea {
+  border-radius: var(--border-radius);
+  border: 0;
+  box-shadow: var(--login-box-shadow);
+  padding: 8px 160px 8px 15px;
+  color: gray;
+  outline: none;
+  margin-bottom: 10px;
+}
+#datatable-buttons .form-control{
+  border-radius: var(--border-radius);
+  border: 0;
+  box-shadow: var(--login-box-shadow);
+}
+#ViewModal .form-control:disabled, .form-control[readonly] {
+  background-color: #55c5e31f;
+}
+#datatable-buttons
+thead,
+th {
+  color: white;
 }

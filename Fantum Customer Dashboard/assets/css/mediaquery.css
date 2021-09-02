@@ -46,18 +46,20 @@
 
 }
 @media (min-width: 576px) {
-  #OneTimeModal .modal-dialog {
-  max-width: 750px;  
-}
-#HowToAddModal .modal-dialog {
-  max-width: 750px;
-}
-#SettingsModal .modal-dialog {
-  max-width: 750px;
-}
+  .modal-dialog {
+    max-width: 750px;
+  }
 #TechnicalSupportModal .modal-dialog {
   max-width: 300px;
   border-radius: 50px;
+}
+
+
+#PasscodeOneTimeModal .modal-dialog {
+    max-width: 550px;
+}
+#PasscodePermanentModal .modal-dialog {
+  max-width: 550px;
 }
 }
 
