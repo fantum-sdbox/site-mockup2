@@ -61,6 +61,9 @@
 #PasscodePermanentModal .modal-dialog {
   max-width: 550px;
 }
+#ViewModal .modal-dialog {
+  max-width: 500px;
+}
 }
 
 

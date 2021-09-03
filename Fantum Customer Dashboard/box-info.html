@@ -105,6 +105,81 @@
   margin-top: 15px;
   width: 100%;
 }
+.cus-dropdown .dropdown-menu{
+  margin-top: 5px;
+  margin-left: -130px;
+  padding: 0.5rem 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+.cus-dropdown .dropdown-item{
+  color: black;
+  padding: .35rem 1.5rem;
+  margin: 5px 0;
+  text-align: center;
+  border-radius: 10px;
+}
+.cus-dropdown .dropdown-item:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+.cus-dropdown .dropdown-item a{
+  color: black;
+}
+.cus-dropdown .dropdown-item a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+.cus-dropdown .dropdown-submenu {
+    position: relative;
+    padding: 0;
+    margin-top: 5px;
+}
+.cus-dropdown .dropdown-submenu:hover{
+  font-weight: 700;
+}
+.cus-dropdown .dropdown-submenu>.dropdown-menu {
+    top: 0;
+    right: 100%;
+    margin-top: -6px;
+    margin-right: -1px;
+    margin-left: -150px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.cus-dropdown .dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.cus-dropdown .dropdown-submenu>a:after {
+    display: block;
+    content: "⯇";
+    float: left;
+    width: 0;
+    /* height: 0; */
+    margin-left: -20px;
+    color: #80808036;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-right-color: #fff;
+}
+
+.dropdown-submenu.pull-right {
+    float: none;
+}
+
+.dropdown-submenu.pull-right>.dropdown-menu {
+  right: -100%;
+  margin-right: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+
   </style>
 </head>
 
@@ -334,29 +409,29 @@
                       <a href="subsription.html"><button class="box-round-btn spin circle mr-3"><i
                             class="fas fa-dollar-sign"></i></button></a>
                       <!-- ./Subscription -->
-                      <!-- Dropdown Button -->
+                      <!-- dropdown Button-->
                       <div class="dropdown cus-dropdown">
                         <button class="round-btn dropdown-toggle" type="button" id="dropdownMenuButton"
                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                             class="fas fa-bars"></i>
                         </button>
-  
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <div class="dropdown ICCards-dropdown">
-                            <a class="dropdown-item dropdown-toggle" href="#" id="dropdownICCardsButton"
-                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Issue IC Cards</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownICCardsLink">
-                              <a class="dropdown-item" href="#">ABC</a>
-                              <a class="dropdown-item" href="#">Settings</a>
-                              <a class="dropdown-item text-danger" href="#">Delete Box</a>
-                            </div>
-                          </div>
-                          <a class="dropdown-item" href="#" data-toggle="modal"
-                            data-target="#SettingsModal">Settings</a>
-                          <a class="dropdown-item text-danger" href="#">Delete Box</a>
+                        <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                            <li class="dropdown-submenu">
+                              <a  class="dropdown-item" tabindex="-1" href="#">Issue IC Cards</a>
+                              <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a tabindex="-1" href="#">One-Time</a></li>
+                                <li class="dropdown-item"><a tabindex="-1" href="#">Permanent</a></li>
+                                <li class="dropdown-item text-danger"><a tabindex="-1" href="#">Temporary</a></li>
+                              </ul>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="#"data-toggle="modal"
+                              data-target="#SettingsModal">Settings</a></li>
+                            <li class="dropdown-item"><a class="text-danger" href="#">Delete Box</a></li>
+                          </ul>
                         </div>
-                      </div>
-                      <!-- ./dropdown -->
+                        <!-- ./dropdown -->
+                      
                     </div>
                     <!--Settings Modal -->
                     <div class="modal fade" id="SettingsModal">
@@ -499,18 +574,18 @@
                   <div class="align-items-end subcrip-sec-box mt-3">
                     <div class=" d-flex justify-content-end">
                       <!-- DropDown Ekey -->
-                      <div class="dropdown cus-dropdown">
+                      <div class="dropdown btn-dropdown">
                         <button class="bttn btn-text-outline font-size-13 text-truncate mr-2 dropdown-toggle"
                           type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false">Send ekey
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#OneTimeModal">One
-                            Time</a>
-                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#TimedModal">Timed</a>
                           <a class="dropdown-item" href="#" data-toggle="modal"
                             data-target="#PermanentModal">Permanent</a>
-                          <a class="dropdown-item" href="#" data-toggle="modal"
+                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#TimedModal">Timed</a>
+                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#OneTimeModal">One
+                            Time</a>
+                         <a class="dropdown-item" href="#" data-toggle="modal"
                             data-target="#RecurringModal">Recurring</a>
                         </div>
                       </div>
@@ -736,18 +811,18 @@
                       </div>
                       <!--end Recuring modal -->
                       <!-- Dropdown Send passcode -->
-                      <div class="dropdown cus-dropdown ">
+                      <div class="dropdown btn-dropdown ">
                         <button class="bttn btn-text-outline font-size-13 text-truncate mr-2 dropdown-toggle"
                           type="button" id="dropdownPasscodeButton" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false">Send passcode</button>
                         <button class="btnOne font-size-13 text-truncate">Remote Unlock</button>
                         <div class="dropdown-menu" aria-labelledby="dropdownPasscodeButton">
                           <a class="dropdown-item" href="#" data-toggle="modal"
-                            data-target="#PasscodeOneTimeModal">One Time</a>
-                          <a class="dropdown-item" href="#" data-toggle="modal"
+                            data-target="#PasscodePermanentModal">Permanent</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal"
                             data-target="#PasscodeTimedModal">Timed</a>
                           <a class="dropdown-item" href="#" data-toggle="modal"
-                            data-target="#PasscodePermanentModal">Permanent</a>
+                            data-target="#PasscodeOneTimeModal">One Time</a>
                           <a class="dropdown-item" href="#" data-toggle="modal"
                             data-target="#PasscodeCustomModal">Custom</a>
                           <a class="dropdown-item" href="#" data-toggle="modal"
@@ -1218,80 +1293,109 @@
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                               <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Recipient Account</th>
-                                <th>Assigner</th>
-                                <th>Assigner Time</th>
-                                <th>Validity Period</th>
-                                <th>Status</th>
-                                <th class="text-center">Operation</th>
+                                <th>Icon</th>
+                                <th>E-Key Name</th>
+                                <th>Issued Date</th>
+                                <th>Valid Till</th>
+                                <th>Access Type</th>
+                                <th>Validity</th>
+                                <th>Recurring Mode</th>
+                                <th class="text-center">Action</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td> Test Key</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                                <td> Ekey User</td>
+                                <td>Permanent</td>
+                                <td class="text-center">Daily</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
+                                    
+                                    <!-- <a onclick="copyToClipboard('#datatable-info')">
+                                      <li><i class="fas fa-copy"></i>hi</li>
+                                    </a> -->
+                                    
+                                    <a href="#" data-toggle="modal" data-target="#EditModal">
+                                      <li><i class="fas fa-edit"></i></li>
                                     </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
+                                    <!-- Edit Modal -->
+                                    <div class="modal fade" id="EditModal">
                                       <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
                                           <!-- Modal body -->
                                           <div class="modal-body">
                                             <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
+                                              <h3>Edit E-key</h3>
+                                              <div class="form-row justify-content-between">
+                                                <div class="form-group col-md-5">
+                                                  <label for="E-KeyName">E-Key Name</label>
+                                                  <input type="text" id="E-KeyName" class="form-control " aria-describedby="Name"
+                                                    placeholder="Enter Name" disabled>
+                                                </div>
+                                                <div class="form-group col-md-5">
+                                                  <label for="IssuedDate">Issued Date</label>
+                                                  <input type="text" id="IssuedDate" class="form-control " aria-describedby="Name"
+                                                    placeholder="Enter a Recipient Account mail" disabled>
+                                                </div>
                                               </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
+                                              <div class="form-row justify-content-between">
+                                                <div class="form-group col-md-5">
+                                                  <label for="ValidTill">Valid Till</label>
+                                                  <input type="text" id="ValidTill" class="form-control " aria-describedby="Name"
+                                                    placeholder="Enter Assigner" disabled>
+                                                </div>
+                                                <div class="form-group col-md-5">
+                                                  <label for="AccessType">Access Type</label>
+                                                  <input type="text" id="AccessType" class="form-control " aria-describedby="Name"
+                                                    placeholder="Enter Assigner Time" disabled>
+                                                </div>
                                               </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
+                                              <div class="form-row justify-content-between">
+                                                <div class="form-group col-md-5">
+                                                  <label for="Validity">Validity</label>
+                                                  <input type="text" id="Validity" class="form-control " aria-describedby="Name"
+                                                    placeholder="Enter Validity Period" disabled>
+                                                </div>
+                                                <div class="form-group col-md-5">
+                                                  <label for="RecurringMode">Recurring Mode</label>
+                                                  <input type="text" id="RecurringMode" class="form-control " aria-describedby="Name"
+                                                    placeholder="Enter Status" disabled>
+                                                </div>
                                               </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
+                                              <div class="d-flex flex-row justify-content-end  mt-3">
+                                                <button class="btnOne">done</button>
                                               </div>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
-                                    
-                                    <!--end View Modal -->
+                                    </div>
+                                    <!--end Edit Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-trash-alt"></i></li>
                                     </a>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                                <td> Test Key</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                                <td> Ekey User</td>
+                                <td>Permanent</td>
+                                <td class="text-center">Daily</td>
+                                <td>
+                                  <ul class="list-unstyled d-flex table-icon justify-content-center">
+                                    
+                                    <!-- <a onclick="copyToClipboard('#datatable-info')">
+                                      <li><i class="fas fa-copy"></i>hi</li>
+                                    </a> -->
+                                    
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
                                     </a>
@@ -1357,67 +1461,19 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td> Test Key</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                                <td> Ekey User</td>
+                                <td>Permanent</td>
+                                <td class="text-center">Daily</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
-                                    <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
-                                    </a>
+                                    <!-- <a onclick="copyToClipboard('#datatable-info')">
+                                      <li><i class="fas fa-copy"></i>hi</li>
+                                    </a> -->
+                                    
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
                                     </a>
@@ -1483,67 +1539,19 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td> Test Key</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                                <td> Ekey User</td>
+                                <td>Permanent</td>
+                                <td class="text-center">Daily</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
-                                    <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
-                                    </a>
+                                    <!-- <a onclick="copyToClipboard('#datatable-info')">
+                                      <li><i class="fas fa-copy"></i>hi</li>
+                                    </a> -->
+                                    
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
                                     </a>
@@ -1609,193 +1617,19 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td> Test Key</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                                <td> Ekey User</td>
+                                <td>Timed</td>
+                                <td class="text-center"> Weekly</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
-                                    <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
-                                    </a>
-                                    <a href="#" data-toggle="modal" data-target="#EditModal">
-                                      <li><i class="fas fa-edit"></i></li>
-                                    </a>
-                                    <!-- Edit Modal -->
-                                    <div class="modal fade" id="EditModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <h3>All Information</h3>
-                                              
-                                              <div class="form-row justify-content-between">
-                                                <div class="form-group col-md-5">
-                                                  <label for="Name">Name</label>
-                                                  <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                                    placeholder="Enter Name">
-                                                </div>
-                                                <div class="form-group col-md-5">
-                                                  <label for="Name">Recipient Account</label>
-                                                  <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                                    placeholder="Enter a Recipient Account mail">
-                                                </div>
-                                              </div>
-                                              <div class="form-row justify-content-between">
-                                                <div class="form-group col-md-5">
-                                                  <label for="Name">Assigner</label>
-                                                  <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                                    placeholder="Enter Assigner">
-                                                </div>
-                                                <div class="form-group col-md-5">
-                                                  <label for="Name">Assigner Time</label>
-                                                  <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                                    placeholder="Enter Assigner Time">
-                                                </div>
-                                              </div>
-                                              <div class="form-row justify-content-between">
-                                                <div class="form-group col-md-5">
-                                                  <label for="Name">Validity Period</label>
-                                                  <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                                    placeholder="Enter Validity Period">
-                                                </div>
-                                                <div class="form-group col-md-5">
-                                                  <label for="Name">Status</label>
-                                                  <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                                    placeholder="Enter Status">
-                                                </div>
-                                              </div>
-                                              <div class="d-flex flex-row justify-content-end  mt-3">
-                                                <button class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!--end Edit Modal -->
-                                    <a href="#">
-                                      <li><i class="fas fa-trash-alt"></i></li>
-                                    </a>
-                                  </ul>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
-                                <td>
-                                  <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
+                                    <!-- <a onclick="copyToClipboard('#datatable-info')">
+                                      <li><i class="fas fa-copy"></i>hi</li>
+                                    </a> -->
                                     
-                                    <!--end View Modal -->
-                                    <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
-                                    </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
                                     </a>
@@ -1878,79 +1712,32 @@
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                               <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Recipient Account</th>
-                                <th>Assigner</th>
-                                <th>Assigner Time</th>
-                                <th>Validity Period</th>
-                                <th>Status</th>
-                                <th class="text-center">Operation</th>
+                                <th>Icon</th>
+                                <th>Passcode Name</th>
+                                <th>Passcode</th>
+                                <th>Issued Date</th>
+                                <th>Valid Till</th>
+                                <th>Valid Time</th>
+                                <th>Validity</th>
+                                <th>Recurring Mode</th>
+                                <th class="text-center">Action</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td> Test Passcode</td>
+                                <td>852716#</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                                <td>20:00 - 21:00</td>
+                                <td>Permanent</td>
+                                <td>Daily</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-copy"></i></li>
                                     </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
@@ -2017,66 +1804,18 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td> Test Passcode</td>
+                                <td>852716#</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                                <td>20:00 - 21:00</td>
+                                <td>Permanent</td>
+                                <td>Daily</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-copy"></i></li>
                                     </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
@@ -2143,66 +1882,18 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td> Test Passcode</td>
+                                <td>852716#</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                                <td>20:00 - 21:00</td>
+                                <td>Permanent</td>
+                                <td>Daily</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-copy"></i></li>
                                     </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
@@ -2269,66 +1960,18 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td> Test Passcode</td>
+                                <td>852716#</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                                <td>20:00 - 21:00</td>
+                                <td>Permanent</td>
+                                <td>Daily</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-copy"></i></li>
                                     </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
@@ -2395,66 +2038,18 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td> Test Passcode</td>
+                                <td>852716#</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                                <td>20:00 - 21:00</td>
+                                <td>Permanent</td>
+                                <td>Daily</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-copy"></i></li>
                                     </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
@@ -2537,79 +2132,26 @@
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                               <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Recipient Account</th>
-                                <th>Assigner</th>
-                                <th>Assigner Time</th>
-                                <th>Validity Period</th>
-                                <th>Status</th>
-                                <th class="text-center">Operation</th>
+                                <th>Icon</th>
+                                <th>ICCard Name</th>
+                                <th>Card Number</th>
+                                <th>Issued Date</th>
+                                <th>Validity</th>
+                                <th class="text-center">Action</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td>Test ICCard</td>
+                                <td>37268975368</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td>Permanent</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-copy"></i></li>
                                     </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
@@ -2676,66 +2218,15 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td>Test ICCard</td>
+                                <td>37268975368</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td>Permanent</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-copy"></i></li>
                                     </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
@@ -2802,66 +2293,15 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td>Test ICCard</td>
+                                <td>37268975368</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td>Permanent</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-copy"></i></li>
                                     </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
@@ -2928,66 +2368,15 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td>Test ICCard</td>
+                                <td>37268975368</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td>Permanent</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-copy"></i></li>
                                     </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
@@ -3054,66 +2443,15 @@
                               </tr>
                               <tr>
                                 <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                                <td> Alex Freeman</td>
-                                <td>ryangordon@test.com</td>
-                                <td>Fantum</td>
-                                <td class="text-turncate"> 01:47 15 APR 2021</td>
-                                <td>2009/09/15</td>
-                                <td>Active</td>
+                                <td>Test ICCard</td>
+                                <td>37268975368</td>
+                                <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                                <td>Permanent</td>
                                 <td>
                                   <ul class="list-unstyled d-flex table-icon justify-content-center">
-                                    <a href="#" data-toggle="modal" data-target="#ViewModal"> 
-                                      <li><i class="fas fa-eye"></i></li>
-                                    </a>
-                                    <!-- View Modal -->
-                                    <div class="modal fade" id="ViewModal">
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h3>All Information</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <!-- Modal body -->
-                                          <div class="modal-body">
-                                            <div class="container">
-                                              <div class="row">
-                                                <label for="Name">Name: &ensp;</label>
-                                              <p &ensp>Alex Freeman</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Recipient Account: &ensp;</label>
-                                              <p>ryangordon@test.com</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner: &ensp;</label>
-                                                <p>Fantum</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Assigner Time: &ensp;</label>
-                                                <p>01:47 15 APR 2021</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Validity Period: &ensp;</label>
-                                                <p>2009/09/15</p>
-                                              </div>
-                                              <div class="row">
-                                                <label for="Name">Status: &ensp;</label>
-                                                <p>Active</p>
-                                              </div>
-                                            </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btnOne">done</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     
-                                    <!--end View Modal -->
                                     <a href="#">
-                                      <li><i class="fas fa-share-alt"></i></li>
+                                      <li><i class="fas fa-copy"></i></li>
                                     </a>
                                     <a href="#" data-toggle="modal" data-target="#EditModal">
                                       <li><i class="fas fa-edit"></i></li>
@@ -3311,7 +2649,13 @@ $('#imageModalContainer').modally();
         $('.modal').modal('hide');
       });
     });
-
+    function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+    }
   </script>
 </body>
 
