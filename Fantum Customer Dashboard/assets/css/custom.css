@@ -284,9 +284,14 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
   width: 60%;
 }
 
+.refer-friend h5{
+  font-weight: 600;
+  margin-left:-10px;
+}
 .metismenu .refer-friend p {
   color: var(--text-secondary);
   font-size: 12px;
+  margin-left:-10px;
 }
 
 .menu-style a {
