@@ -64,6 +64,9 @@
 #ViewModal .modal-dialog {
   max-width: 500px;
 }
+#OTPModal .modal-dialog {
+  max-width: 250px;
+}
 }
 
 

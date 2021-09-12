@@ -41,430 +41,223 @@
 
 <body data-sidebar="dark" id="FAQ-pg">
 
-  <!-- Begin page -->
-  <div id="layout-wrapper">
-    <header id="page-topbar">
-      <div class="navbar-header">
-        <div class="d-flex">
-          <!-- LOGO -->
-          <div class="navbar-brand-box">
-            <a href="index.html" class="logo logo-light">
-              <span class="logo-sm">
-                <img src="assets/images/logo/Fantum.png" alt="" height="50">
-              </span>
-              <span class="logo-lg">
-                <img src="assets/images/logo/Fantum-long.png" alt="" height="50">
-              </span>
-            </a>
-          </div>
-
-          <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
-            <i class="ri-menu-2-line align-middle"></i>
-          </button>
-        </div>
-        <!-- Right Header -->
-        <div class="d-flex">
-          <div class="dropdown d-inline-block user-dropdown">
-            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img class="rounded-circle header-profile-user" src="assets/images/users/Ellipse 1.png"
-                alt="Header Avatar">
-              <span class="d-none d-xl-inline-block ml-1">Alex Freeman</span>
-              <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right">
-              <!-- item-->
-              <a class="dropdown-item" href="#"><i class="ri-user-line align-middle mr-1"></i> Profile
-              </a>
-
-              <a class="dropdown-item d-block" href="#"><i class="ri-settings-2-line align-middle mr-1"></i> Settings
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item text-danger" href="#">
-                <i class="ri-shut-down-line align-middle mr-1 text-danger">
-                </i> Logout
-              </a>
-            </div>
-            <!-- ./profile-item -->
+  <div class="page-content">
+    <div class="container-fluid">
+      <!-- start page title -->
+      <div class="row">
+        <div class="col-12">
+          <div class="page-title-box d-flex align-items-center justify-content-between">
+            <h4 class="mb-0">FAQ</h4>
           </div>
         </div>
       </div>
-    </header>
-
-    <!-- ========== Left Sidebar Start ========== -->
-    <div class="vertical-menu">
-
-      <div data-simplebar class="h-100">
-        <!--- Sidemenu -->
-        <div id="sidebar-menu">
-          <!-- Left Menu Start -->
-          <ul class="metismenu list-unstyled" id="side-menu">
-            <li class="menu-title">General</li>
-
-            <li>
-              <a href="index.html" class="waves-effect">
-                <i class="ri-dashboard-fill"></i>
-                <span>Dashboard</span>
-              </a>
-            </li>
-
-            <li class="mm-active">
-              <a href="notification.html" class=" waves-effect">
-                <i class="ri-notification-4-fill"></i>
-                <span class="badge badge-pill badge-success float-right">38</span>
-                <span>Notification</span>
-              </a>
-            </li>
-            <li>
-              <a href="activites.html" class=" waves-effect">
-                <i class="ri-flashlight-fill"></i>
-                <span>Activities</span>
-              </a>
-            </li>
-
-            <li><span class="menu-title">Boxes</span> 
-							<span class="badge badge-pill badge-success float-right my-1 mr-4" style="font-size:x-small;">2</span>
-						</li>
-
-
-            <li>
-              <a href="box-info.html" class=" waves-effect">
-                <img src="assets/images/home/box-1.png" class="menu-box" alt="box">
-                <span>My Home Box</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="javascript: void(0);" class="waves-effect">
-                <img src="assets/images/home/box-2.png" class="menu-box" alt="box">
-                <span>Tony's Box</span>
-              </a>
-            </li>
-
-            <li class="text-center mt-5 refer">
-              <div class="refer-friend">
-								<a href="Refer&Earn.html">
-								  <img src="assets/images/home/refer-friend.png" class="img-fluid" alt="">
-								  <span>
-									<h5>Invite Your Friends</h5>
-									<p class="text-black">Lorem ipsum, dolor sit amet <br> consectetur adipisicing</p>
-								  </span>
-								</a>
-							</div>
-              <div class="refer-icon d-none">
-                <a href="refer.html" class=" waves-effect ">
-                  <i class="ri-user-shared-fill"></i>
-                  <span>Refer Friends</span>
-                </a>
-              </div>
-            </li>
-
-            <li class="menu-style mt-2">
-              <a href="faq.html" class=" waves-effect">
-                <i class="ri-question-answer-fill"></i>
-                <span>FAQ</span>
-              </a>
-            </li>
-
-            <li class="menu-style mt-2">
-              <a href="support.html" class=" waves-effect">
-                <i class="ri-customer-service-2-fill"></i>
-                <span>Technical Support</span>
-              </a>
-            </li>
-
-            <li class="social-menu-list mt-3">
-              <a href="#" class=" vertical-social-icon waves-effect">
-                <img class="social-media-icon" src="assets/images/home/social-media.png">
-              </a>
-
-              <ul class=" social-menu d-flex justify-content-center px-4 ">
-                <li>
-                  <a href="#" class=" waves-effect">
-                    <i class="fab fa-facebook-f text-white"></i>
-                  </a>
+      <!-- end page title -->
+      <!-- Body-box -->
+      <!-- Navtab -->
+      <div class="row ">
+        <div class="col-md-12">
+          <div class="faq-nav custom-nav">
+            <nav class="navbar ">
+              <ul class="nav nav-pills " id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link " id="pills-Box-tab" data-toggle="pill" href="#pills-Box" role="tab"
+                    aria-controls="pills-Box" aria-selected="true">Box</a>
                 </li>
-                <li>
-                  <a href="#" class=" waves-effect">
-                    <i class="fab fa-twitter text-white"></i>
-                  </a>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="pills-Subscription-tab" data-toggle="pill" href="#pills-Subscription"
+                    role="tab" aria-controls="pills-Subscription" aria-selected="false">Subscription</a>
                 </li>
-                <li>
-                  <a href="#" class=" waves-effect">
-                    <i class="fab fa-linkedin-in text-white"></i>
-                  </a>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-ICCards-tab" data-toggle="pill" href="#pills-ICCards" role="tab"
+                    aria-controls="pills-ICCards" aria-selected="false">IC Cards</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-ReferEarn-tab" data-toggle="pill" href="#pills-ReferEarn" role="tab"
+                    aria-controls="pills-ReferEarn" aria-selected="false">Refer & Earn</a>
                 </li>
               </ul>
-              <!-- After Hover Vertical Social Menu -->
-              <div class="vertical-social-menu ">
-                <ul class=" social-menu justify-content-center d-none">
-                  <li>
-                    <a href="#" class=" waves-effect">
-                      <i class="fab fa-facebook-f text-white"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class=" waves-effect">
-                      <i class="fab fa-twitter text-white"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class=" waves-effect">
-                      <i class="fab fa-linkedin-in text-white"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <!-- Sidebar -->
-      </div>
-    </div>
-    <!-- Left Sidebar End -->
-
-    <!-- ============================================================== -->
-    <!-- Start right Content here -->
-    <!-- ============================================================== -->
-    <div class="main-content">
-      <div class="page-content">
-        <div class="container-fluid">
-          <!-- start page title -->
-          <div class="row">
-            <div class="col-12">
-              <div class="page-title-box d-flex align-items-center justify-content-between">
-                <h4 class="mb-0">FAQs</h4>
-
-              </div>
-            </div>
-          </div>
-          <!-- end page title -->
-          <!-- Body-box -->
-          <!-- Navtab -->
-          <div class="row ">
-            <div class="col-md-12">
-              <div class="faq-nav custom-nav">
-                <nav class="navbar ">
-                  <ul class="nav nav-pills " id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                        aria-controls="pills-home" aria-selected="true">Box</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
-                        role="tab" aria-controls="pills-profile" aria-selected="false">Subscription</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                        aria-controls="pills-contact" aria-selected="false">IC Cards</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                        aria-controls="pills-contact" aria-selected="false">Refer & Earn</a>
-                    </li>
-                  </ul>
-                </nav>
-
-                <!-- Nav Details -->
-                <div class="tab-content" id="pills-tabContent">
-                  <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            </nav>
+            <!-- Nav Details -->
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade " id="pills-Box" role="tabpanel" aria-labelledby="pills-Box-tab">
+                <!-- Accordion -->
+                <div class="mt-2">
+                  
                     <!-- Accordion -->
-                    <div class="mt-2">
-                      
-                        <!-- Accordion -->
-                        <div id="accordionExample" class="accordion">
-                          <!-- Accordion item 1 -->
-                          <div class="card card-border ">
-                            <div id="headingOne" class="card-header bg-white shadow-sm ">
-                              <h2 class="mb-0">
-                                <button type="button" data-toggle="collapse" data-target="#collapseOne"
-                                  aria-expanded="true" aria-controls="collapseOne"
-                                  class="btn btn-link text-dark font-weight-bold text-uppercase collapsible-link">What
-                                  is Refer and Earn programme ?</button>
-                              </h2>
-                            </div>
-                            <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
-                              class="collapse show">
-                              <div class="card-body">
-                                <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
-                                  life
-                                  accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                  skateboard
-                                  dolor
-                                  brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                  aliqua
-                                  put
-                                  a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                              </div>
-                            </div>
+                    <div id="accordionExample" class="accordion">
+                      <!-- Accordion item 1 -->
+                      <div class="card card-border ">
+                        <div id="headingOne" class="card-header bg-white shadow-sm ">
+                          <h2 class="mb-0">
+                            <button type="button" data-toggle="collapse" data-target="#collapseOne"
+                              aria-expanded="true" aria-controls="collapseOne"
+                              class="btn btn-link text-dark font-weight-bold text-uppercase collapsible-link">What
+                              is Refer and Earn programme ?</button>
+                          </h2>
+                        </div>
+                        <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
+                          class="collapse show">
+                          <div class="card-body">
+                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
+                              life
+                              accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                              skateboard
+                              dolor
+                              brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                              aliqua
+                              put
+                              a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
                           </div>
-
-                          <!-- End -->
-
-                          <!-- Accordion item 2 -->
-                          <div class="card card-border">
-                            <div id="headingTwo" class="card-header bg-white shadow-sm ">
-                              <h2 class="mb-0">
-                                <button type="button" data-toggle="collapse" data-target="#collapseTwo"
-                                  aria-expanded="false" aria-controls="collapseTwo" class="btn btn-link collapsed text-dark font-weight-bold text-uppercase
-                          collapsible-link"> What is Refer and Earn programme ?</button>
-                              </h2>
-                            </div>
-                            <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
-                              class="collapse">
-                              <div class="card-body ">
-                                <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
-                                  life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                  skateboard
-                                  dolor
-                                  brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                  aliqua put
-                                  a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                              </div>
-                            </div>
-                          </div><!-- End -->
-
-                          <!-- Accordion item 3 -->
-                          <div class="card card-border">
-                            <div id="headingThree" class="card-header bg-white shadow-sm ">
-                              <h2 class="mb-0">
-                                <button type="button" data-toggle="collapse" data-target="#collapseThree"
-                                  aria-expanded="false" aria-controls="collapseThree" class="btn btn-link collapsed text-dark font-weight-bold text-uppercase
-                          collapsible-link">What is Refer and Earn programme ?</button>
-                              </h2>
-                            </div>
-                            <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample"
-                              class="collapse">
-                              <div class="card-body">
-                                <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
-                                  life
-                                  accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                  skateboard
-                                  dolor
-                                  brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                  aliqua put
-                                  a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                              </div>
-                            </div>
-                          </div><!-- End -->
-
-                        </div><!-- End -->
-                      
-                    </div>
-                    <!-- ./Accordion -->
-                  </div>
-                  <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
-                    aria-labelledby="pills-profile-tab">
-                    <!-- Accordion -->
-                    <div class="mt-2">
-                      
-                        <!-- Accordion -->
-                        <div id="accordionExample" class="accordion">
-                          <!-- Accordion item 1 -->
-                          <div class="card card-border ">
-                            <div id="headingOne" class="card-header bg-white shadow-sm ">
-                              <h2 class="mb-0">
-                                <button type="button" data-toggle="collapse" data-target="#collapseOne"
-                                  aria-expanded="true" aria-controls="collapseOne"
-                                  class="btn btn-link text-dark font-weight-bold text-uppercase collapsible-link">What
-                                  is Refer and Earn programme ?</button>
-                              </h2>
-                            </div>
-                            <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
-                              class="collapse show">
-                              <div class="card-body">
-                                <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
-                                  life
-                                  accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                  skateboard
-                                  dolor
-                                  brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                  aliqua
-                                  put
-                                  a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                              </div>
-                            </div>
+                        </div>
+                      </div>
+                      <!-- End -->
+                      <!-- Accordion item 2 -->
+                      <div class="card card-border">
+                        <div id="headingTwo" class="card-header bg-white shadow-sm ">
+                          <h2 class="mb-0">
+                            <button type="button" data-toggle="collapse" data-target="#collapseTwo"
+                              aria-expanded="false" aria-controls="collapseTwo" class="btn btn-link collapsed text-dark font-weight-bold text-uppercase
+                      collapsible-link"> What is Refer and Earn programme ?</button>
+                          </h2>
+                        </div>
+                        <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
+                          class="collapse">
+                          <div class="card-body ">
+                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
+                              life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                              skateboard
+                              dolor
+                              brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                              aliqua put
+                              a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
                           </div>
-
-                          <!-- End -->
-
-                          <!-- Accordion item 2 -->
-                          <div class="card card-border">
-                            <div id="headingTwo" class="card-header bg-white shadow-sm ">
-                              <h2 class="mb-0">
-                                <button type="button" data-toggle="collapse" data-target="#collapseTwo"
-                                  aria-expanded="false" aria-controls="collapseTwo" class="btn btn-link collapsed text-dark font-weight-bold text-uppercase
-                          collapsible-link"> What is Refer and Earn programme ?</button>
-                              </h2>
-                            </div>
-                            <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
-                              class="collapse">
-                              <div class="card-body ">
-                                <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
-                                  life
-                                  accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                  skateboard
-                                  dolor
-                                  brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                  aliqua put
-                                  a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                              </div>
-                            </div>
-                          </div><!-- End -->
-
-                          <!-- Accordion item 3 -->
-                          <div class="card card-border">
-                            <div id="headingThree" class="card-header bg-white shadow-sm ">
-                              <h2 class="mb-0">
-                                <button type="button" data-toggle="collapse" data-target="#collapseThree"
-                                  aria-expanded="false" aria-controls="collapseThree" class="btn btn-link collapsed text-dark font-weight-bold text-uppercase
-                          collapsible-link">What is Refer and Earn programme ?</button>
-                              </h2>
-                            </div>
-                            <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample"
-                              class="collapse">
-                              <div class="card-body">
-                                <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
-                                  life
-                                  accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                  skateboard
-                                  dolor
-                                  brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                  aliqua put
-                                  a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                              </div>
-                            </div>
-                          </div><!-- End -->
-
-                        </div><!-- End -->
-                      
-                    </div>
-                    <!-- ./Accordion -->
-                  </div>
-                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                    ...
-                  </div>
+                        </div>
+                      </div><!-- End -->
+                      <!-- Accordion item 3 -->
+                      <div class="card card-border">
+                        <div id="headingThree" class="card-header bg-white shadow-sm ">
+                          <h2 class="mb-0">
+                            <button type="button" data-toggle="collapse" data-target="#collapseThree"
+                              aria-expanded="false" aria-controls="collapseThree" class="btn btn-link collapsed text-dark font-weight-bold text-uppercase
+                      collapsible-link">What is Refer and Earn programme ?</button>
+                          </h2>
+                        </div>
+                        <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample"
+                          class="collapse">
+                          <div class="card-body">
+                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
+                              life
+                              accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                              skateboard
+                              dolor
+                              brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                              aliqua put
+                              a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                          </div>
+                        </div>
+                      </div><!-- End -->
+                    </div><!-- End -->
+                  
                 </div>
+                <!-- ./Accordion -->
+              </div>
+              <div class="tab-pane fade show active" id="pills-Subscription" role="tabpanel"
+                aria-labelledby="pills-Subscription-tab">
+                <!-- Accordion -->
+                <div class="mt-2">
+                  
+                    <!-- Accordion -->
+                    <div id="accordionExample" class="accordion">
+                      <!-- Accordion item 1 -->
+                      <div class="card card-border ">
+                        <div id="headingOne" class="card-header bg-white shadow-sm ">
+                          <h2 class="mb-0">
+                            <button type="button" data-toggle="collapse" data-target="#collapseOne"
+                              aria-expanded="true" aria-controls="collapseOne"
+                              class="btn btn-link text-dark font-weight-bold text-uppercase collapsible-link">What
+                              is Refer and Earn programme ?</button>
+                          </h2>
+                        </div>
+                        <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
+                          class="collapse show">
+                          <div class="card-body">
+                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
+                              life
+                              accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                              skateboard
+                              dolor
+                              brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                              aliqua
+                              put
+                              a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End -->
+                      <!-- Accordion item 2 -->
+                      <div class="card card-border">
+                        <div id="headingTwo" class="card-header bg-white shadow-sm ">
+                          <h2 class="mb-0">
+                            <button type="button" data-toggle="collapse" data-target="#collapseTwo"
+                              aria-expanded="false" aria-controls="collapseTwo" class="btn btn-link collapsed text-dark font-weight-bold text-uppercase
+                      collapsible-link"> What is Refer and Earn programme ?</button>
+                          </h2>
+                        </div>
+                        <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
+                          class="collapse">
+                          <div class="card-body ">
+                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
+                              life
+                              accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                              skateboard
+                              dolor
+                              brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                              aliqua put
+                              a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                          </div>
+                        </div>
+                      </div><!-- End -->
+                      <!-- Accordion item 3 -->
+                      <div class="card card-border">
+                        <div id="headingThree" class="card-header bg-white shadow-sm ">
+                          <h2 class="mb-0">
+                            <button type="button" data-toggle="collapse" data-target="#collapseThree"
+                              aria-expanded="false" aria-controls="collapseThree" class="btn btn-link collapsed text-dark font-weight-bold text-uppercase
+                      collapsible-link">What is Refer and Earn programme ?</button>
+                          </h2>
+                        </div>
+                        <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample"
+                          class="collapse">
+                          <div class="card-body">
+                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high
+                              life
+                              accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                              skateboard
+                              dolor
+                              brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                              aliqua put
+                              a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                          </div>
+                        </div>
+                      </div><!-- End -->
+                    </div><!-- End -->
+                  
+                </div>
+                <!-- ./Accordion -->
+              </div>
+              <div class="tab-pane fade" id="pills-ICCards" role="tabpanel" aria-labelledby="pills-ICCards-tab">
+                ...
+              </div>
+              <div class="tab-pane fade" id="pills-ReferEarn" role="tabpanel" aria-labelledby="pills-ReferEarn-tab">
+                ...
               </div>
             </div>
           </div>
-          <!-- ./Body-box -->
-        </div> <!-- container-fluid -->
+        </div>
       </div>
-      <!-- End Page-content -->
-      <!-- footer -->
-      <footer class="footer login-footer">
-				<div class="text-sm-center d-sm-block">
-					<p>Fantum © 2021 - All Rights Reserved | <span><a href="#">Terms & Conditions</a></span> | <span><a
-								href="#">Privacy
-								Policy</a></span></p>
-				</div>
-			</footer>
-    </div>
-    <!-- end main content-->
-
+      <!-- ./Body-box -->
+    </div> <!-- container-fluid -->
   </div>
-  <!-- END layout-wrapper -->
 
 
   <!-- JAVASCRIPT -->

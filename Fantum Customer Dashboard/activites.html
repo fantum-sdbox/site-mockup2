@@ -1,244 +1,61 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <title>Fantum</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- App Css-->
-    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-
-    <!-- Custom Css -->
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <!-- Media Query -->
-    <link rel="stylesheet" href="assets/css/mediaquery.css">
-    <!-- Slick -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-
-
-</head>
-
-<body data-sidebar="dark">
-    <div id="layout-wrapper">
-        <header id="page-topbar">
-            <div class="navbar-header">
-                <div class="d-flex">
-                    <!-- LOGO -->
-                    <div class="navbar-brand-box">
-                        <a href="index.html" class="logo logo-light">
-                            <span class="logo-sm">
-                                <img src="assets/images/logo/Fantum.png" alt="" height="50">
-                            </span>
-                            <span class="logo-lg">
-                                <img src="assets/images/logo/Fantum-long.png" alt="" height="50">
-                            </span>
-                        </a>
-                    </div>
-
-                    <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect"
-                        id="vertical-menu-btn">
-                        <i class="ri-menu-2-line align-middle"></i>
-                    </button>
-                </div>
-                <!-- Right Header -->
-                <div class="d-flex">
-                    <div class="dropdown d-inline-block user-dropdown">
-                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="rounded-circle header-profile-user" src="assets/images/users/Ellipse 1.png"
-                                alt="Header Avatar">
-                            <span class="d-none d-xl-inline-block ml-1">Alex Freeman</span>
-                            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <!-- item-->
-                            <a class="dropdown-item" href="profile.html"><i class="ri-user-line align-middle mr-1"></i>
-                                Profile
-                            </a>
-
-                            <a class="dropdown-item d-block" href="setting.html"><i
-                                    class="ri-settings-2-line align-middle mr-1"></i>
-                                Settings
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-danger" href="login.html">
-                                <i class="ri-shut-down-line align-middle mr-1 text-danger">
-                                </i> Logout
-                            </a>
-                        </div>
-                        <!-- ./profile-item -->
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- ========== Left Sidebar Start ========== -->
-        <div class="vertical-menu">
-
-            <div data-simplebar class="h-100">
-                <!--- Sidemenu -->
-                <div id="sidebar-menu">
-                    <!-- Left Menu Start -->
-                    <ul class="metismenu list-unstyled" id="side-menu">
-                        <li class="menu-title">General</li>
-
-                        <li>
-                            <a href="index.html" class="waves-effect">
-                                <i class="ri-dashboard-fill"></i>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="notification.html" class=" waves-effect">
-                                <i class="ri-notification-4-fill"></i>
-                                <span class="badge badge-pill badge-success float-right">38</span>
-                                <span>Notification</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="activites.html" class=" waves-effect">
-                                <i class="ri-flashlight-fill"></i>
-                                <span>Activities</span>
-                            </a>
-                        </li>
-
-                        <li><span class="menu-title">Boxes</span> 
-							<span class="badge badge-pill badge-success float-right my-1 mr-4" style="font-size:x-small;">2</span>
-						</li>
-
-
-                        <li>
-                            <a href="box-info.html" class=" waves-effect">
-                                <img src="assets/images/home/box-1.png" class="menu-box" alt="box">
-                                <span>My Home Box</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect">
-                                <img src="assets/images/home/box-2.png" class="menu-box" alt="box">
-                                <span>Tony's Box</span>
-                            </a>
-                        </li>
-
-                        <li class="text-center mt-5 refer">
-                            <div class="refer-friend">
-								<a href="Refer&Earn.html">
-								  <img src="assets/images/home/refer-friend.png" class="img-fluid" alt="">
-								  <span>
-									<h5>Invite Your Friends</h5>
-									<p class="text-black">Lorem ipsum, dolor sit amet <br> consectetur adipisicing</p>
-								  </span>
-								</a>
-							</div>
-                            <div class="refer-icon d-none">
-                                <a href="faq.html" class=" waves-effect ">
-                                    <i class="ri-user-shared-fill"></i>
-                                    <span>Refer Friends</span>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="menu-style mt-2">
-                            <a href="faq.html" class=" waves-effect">
-                                <i class="ri-question-answer-fill"></i>
-                                <span>FAQ</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-style mt-2">
-                            <a href="support.html" class=" waves-effect">
-                                <i class="ri-customer-service-2-fill"></i>
-                                <span>Technical Support</span>
-                            </a>
-                        </li>
-
-                        <li class="social-menu-list mt-3">
-                            <a href="#" class=" vertical-social-icon waves-effect">
-                              <img class="social-media-icon" src="assets/images/home/social-media.png">
-                            </a>
-
-                            <ul class=" social-menu d-flex justify-content-center px-4 ">
-                                <li>
-                                    <a href="#" class=" waves-effect">
-                                        <i class="fab fa-facebook-f text-white"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class=" waves-effect">
-                                        <i class="fab fa-twitter text-white"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class=" waves-effect">
-                                        <i class="fab fa-linkedin-in text-white"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- After Hover Vertical Social Menu -->
-                            <div class="vertical-social-menu ">
-                                <ul class=" social-menu justify-content-center d-none">
-                                    <li>
-                                        <a href="#" class=" waves-effect">
-                                            <i class="fab fa-facebook-f text-white"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class=" waves-effect">
-                                            <i class="fab fa-twitter text-white"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class=" waves-effect">
-                                            <i class="fab fa-linkedin-in text-white"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Sidebar -->
-            </div>
-        </div>
-        <!-- Left Sidebar End -->
-
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
-        <div id="Activity">
-            <div class="main-content">
-                <div class="page-content">
+<div class="page-content"id="Activity">
                     <div class="container-fluid">
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12 mb-0">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
                                     <h4>Activity</h4>
-                                    <div class="searchbar float-right">
+                                    <!-- <div class="searchbar float-right">
                                         <input class="search_input" type="text" name="" placeholder="Search...">
                                         <a href="#" class="search_icon"><i class="fas fa-search float-right"></i></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <!-- end page title -->
                         <!-- body box -->
-                        
-                            <div class="card-btn">
-                                <button class="btn btn-gradient text-truncate">
-                                    <i class="far fa-calendar mr-2"></i> 27 feb 2010
-                                </button>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="custom-nav" style="margin-left: -15px;">
+                                    <nav class="navbar ">
+                                        <ul class="nav nav-pills " id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" id="pills-All-tab" data-toggle="pill"
+                                                    href="#pills-All" role="tab" aria-controls="pills-All"
+                                                    aria-selected="true">All</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-Lock-tab" data-toggle="pill"
+                                                    href="#pills-Lock" role="tab" aria-controls="pills-Lock"
+                                                    aria-selected="false">Lock</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-Unlock-tab" data-toggle="pill"
+                                                    href="#pills-Unlock" role="tab" aria-controls="pills-Unlock"
+                                                    aria-selected="false">Unlock</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-IC-tab" data-toggle="pill"
+                                                    href="#pills-IC" role="tab" aria-controls="pills-IC"
+                                                    aria-selected="false">IC</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="pills-Passcodes-tab" data-toggle="pill"
+                                                    href="#pills-Passcodes" role="tab" aria-controls="pills-Passcodes"
+                                                    aria-selected="false">Passcodes</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
+                        </div>
+                        <div class="tab-content mt-3" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-All" role="tabpanel" aria-labelledby="pills-All-tab">
+                                <div class="card-btn">
+                                    <button class="btn btn-gradient text-truncate">
+                                        <i class="far fa-calendar mr-2"></i> 27 feb 2010
+                                    </button>
+                                </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="notification-tab ">
@@ -250,7 +67,9 @@
                                             <td class="col-md-4">All the data related to this SDBox has been deleted
                                             </td>
                                             <td class="col-md-2">Samuel Shinde</td>
-                                            <td class="col-md-1"><div class="tag">tag</div></td>
+                                            <td class="col-md-1">
+                                                <div class="tag">My home box</div>
+                                            </td>
                                         </table>
                                     </div>
                                     <div class="notification-tab ">
@@ -262,7 +81,9 @@
                                             <td class="col-md-4">All the data related to this SDBox has been deleted
                                             </td>
                                             <td class="col-md-2">Samuel Shinde</td>
-                                            <td class="col-md-1"><div class="tag">tag</div></td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
                                         </table>
                                     </div>
                                     <div class="notification-tab ">
@@ -274,7 +95,9 @@
                                             <td class="col-md-4">All the data related to this SDBox has been deleted
                                             </td>
                                             <td class="col-md-2">Samuel Shinde</td>
-                                            <td class="col-md-1"><div class="tag">tag</div></td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
                                         </table>
                                     </div>
                                     <div class="notification-tab ">
@@ -286,12 +109,14 @@
                                             <td class="col-md-4">All the data related to this SDBox has been deleted
                                             </td>
                                             <td class="col-md-2">Samuel Shinde</td>
-                                            <td class="col-md-1"><div class="tag">tag</div></td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
                                         </table>
                                     </div>
                                 </div>
                             </div>
-                           
+    
                             <div class="card-btn mt-4">
                                 <button class="btn btn-gradient text-truncate">
                                     <i class="far fa-calendar mr-2"></i> 27 feb 2010
@@ -308,7 +133,9 @@
                                             <td class="col-md-4">All the data related to this SDBox has been deleted
                                             </td>
                                             <td class="col-md-2">Samuel Shinde</td>
-                                            <td class="col-md-1"><div class="tag">tag</div></td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
                                         </table>
                                     </div>
                                     <div class="notification-tab ">
@@ -320,7 +147,9 @@
                                             <td class="col-md-4">All the data related to this SDBox has been deleted
                                             </td>
                                             <td class="col-md-2">Samuel Shinde</td>
-                                            <td class="col-md-1"><div class="tag">tag</div></td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
                                         </table>
                                     </div>
                                     <div class="notification-tab ">
@@ -332,7 +161,9 @@
                                             <td class="col-md-4">All the data related to this SDBox has been deleted
                                             </td>
                                             <td class="col-md-2">Samuel Shinde</td>
-                                            <td class="col-md-1"><div class="tag">tag</div></td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
                                         </table>
                                     </div>
                                     <div class="notification-tab ">
@@ -344,51 +175,568 @@
                                             <td class="col-md-4">All the data related to this SDBox has been deleted
                                             </td>
                                             <td class="col-md-2">Samuel Shinde</td>
-                                            <td class="col-md-1"><div class="tag">tag</div></td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
                                         </table>
                                     </div>
-                                    
+    
                                 </div>
                             </div>
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination justify-content-center mt-4">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></i></a>
-                                      </li>
-                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                      <li class="page-item">
-                                        <a class="page-link" href="#"><i class="fas fa-angle-right"></i></a>
-                                      </li>
-                                </ul>
-                              </nav>
+                            </div>
+                            <div class="tab-pane fade" id="pills-Lock" role="tabpanel" aria-labelledby="pills-Lock-tab">
+                                <div class="card-btn">
+                                    <button class="btn btn-gradient text-truncate">
+                                        <i class="far fa-calendar mr-2"></i> 27 feb 2010
+                                    </button>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="card-btn mt-4">
+                                <button class="btn btn-gradient text-truncate">
+                                    <i class="far fa-calendar mr-2"></i> 27 feb 2010
+                                </button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-Unlock" role="tabpanel" aria-labelledby="pills-Unlock-tab">
+                                <div class="card-btn">
+                                    <button class="btn btn-gradient text-truncate">
+                                        <i class="far fa-calendar mr-2"></i> 27 feb 2010
+                                    </button>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="card-btn mt-4">
+                                <button class="btn btn-gradient text-truncate">
+                                    <i class="far fa-calendar mr-2"></i> 27 feb 2010
+                                </button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-IC" role="tabpanel" aria-labelledby="pills-IC-tab">
+                                <div class="card-btn">
+                                    <button class="btn btn-gradient text-truncate">
+                                        <i class="far fa-calendar mr-2"></i> 27 feb 2010
+                                    </button>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="card-btn mt-4">
+                                <button class="btn btn-gradient text-truncate">
+                                    <i class="far fa-calendar mr-2"></i> 27 feb 2010
+                                </button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-Passcodes" role="tabpanel" aria-labelledby="pills-Passcodes-tab">
+                                <div class="card-btn">
+                                    <button class="btn btn-gradient text-truncate">
+                                        <i class="far fa-calendar mr-2"></i> 27 feb 2010
+                                    </button>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="card-btn mt-4">
+                                <button class="btn btn-gradient text-truncate">
+                                    <i class="far fa-calendar mr-2"></i> 27 feb 2010
+                                </button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+                                    <div class="notification-tab ">
+                                        <table class="list-unstyled">
+                                            <th scope="row"></th>
+                                            <td class="col-1"><i class="fas fa-briefcase mr-2"></i></td>
+                                            <td class="col-md-2">6:20 PM</td>
+                                            <td class="col-md-3"><b>Home Delivery Box</b></td>
+                                            <td class="col-md-4">All the data related to this SDBox has been deleted
+                                            </td>
+                                            <td class="col-md-2">Samuel Shinde</td>
+                                            <td class="col-md-1">
+                                                <div class="tag">tag</div>
+                                            </td>
+                                        </table>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                            
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center mt-4">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1"><i
+                                            class="fas fa-angle-left"></i></i></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fas fa-angle-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                     <!--End container -->
                 </div>
                 <!--End page-content -->
-                <!-- footer -->
-                <footer class="footer login-footer">
-                    <div class="text-sm-center d-sm-block">
-                        <p>Fantum © 2021 - All Rights Reserved | <span><a href="#">Terms & Conditions</a></span> | <span><a
-                                    href="#">Privacy
-                                    Policy</a></span></p>
-                    </div>
-                </footer>
-            </div>
-            <!--End main-content -->
-        </div>
-    </div><!-- layout-wrapper -->
-    
-    <!-- JAVASCRIPT -->
-	<script src="assets/libs/jquery/jquery.min.js"></script>
-	<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-	<script src="assets/libs/metismenu/metisMenu.min.js"></script>
-	<script src="assets/libs/simplebar/simplebar.min.js"></script>
-	<script src="assets/libs/node-waves/waves.min.js"></script>
-	<script src="assets/js/app.js"></script>
-	<script src="assets/js/custom.js"></script>
-</body>
-
-</html>
