@@ -295,7 +295,9 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
   margin: 25px 15px;
   padding: 0 5px;
 }
-
+.metismenu .refer-friend:hover{
+  border: 4px solid var(--primary-color);
+}
 .metismenu .refer-friend img {
   width: 60%;
 }
@@ -528,6 +530,16 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
 .modaldonebtn .btnOne{
   min-width: 150px;
 }
+.profile-pg .bttn{
+    width: 200px;
+}
+.Profile-title{
+  margin-left: 20px;
+  font-weight:600;
+}
+
+
+
 
 /* ===========
  Notification Dashboard
@@ -892,9 +904,8 @@ Subscription Details
 
 /* FAQ */
 /* .custom-nav */
-#FAQ-pg .page-title-box h4 {
-    
-    text-transform: initial;
+.FAQ-title .page-title-box h4 {
+  text-transform: capitalize;
 }
 .faq-nav .navbar {
   padding-right: 1rem;
