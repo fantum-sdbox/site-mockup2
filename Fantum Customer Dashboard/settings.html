@@ -24,263 +24,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <!-- flags -->
 
-    
+
 
 </head>
 
 <body data-sidebar="dark">
-    <div id="layout-wrapper">
-        <header id="page-topbar">
-            <div class="navbar-header">
-                <div class="d-flex">
-                    <!-- LOGO -->
-                    <div class="navbar-brand-box">
-                        <a href="index.html" class="logo logo-light">
-                            <span class="logo-sm">
-                                <img src="assets/images/logo/Fantum.png" alt="" height="50">
-                            </span>
-                            <span class="logo-lg">
-                                <img src="assets/images/logo/Fantum-long.png" alt="" height="50">
-                            </span>
-                        </a>
-                    </div>
-
-                    <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect"
-                        id="vertical-menu-btn">
-                        <i class="ri-menu-2-line align-middle"></i>
-                    </button>
-                </div>
-                <!-- Right Header -->
-                <div class="d-flex">
-                    <div class="dropdown d-inline-block user-dropdown">
-                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="rounded-circle header-profile-user" src="assets/images/users/Ellipse 1.png"
-                                alt="Header Avatar">
-                            <span class="d-none d-xl-inline-block ml-1">Alex Freeman</span>
-                            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <!-- item-->
-                            <a class="dropdown-item" href="profile.html"><i class="ri-user-line align-middle mr-1"></i>
-                                Profile
-                            </a>
-
-                            <a class="dropdown-item d-block" href="setting.html"><i
-                                    class="ri-settings-2-line align-middle mr-1"></i>
-                                Settings
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-danger" href="login.html">
-                                <i class="ri-shut-down-line align-middle mr-1 text-danger">
-                                </i> Logout
-                            </a>
-                        </div>
-                        <!-- ./profile-item -->
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="page-content">
+        <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12 mb-0">
+                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                        <h4>Settings And Preferences</h4>
                     </div>
                 </div>
             </div>
-        </header>
-
-        <!-- ========== Left Sidebar Start ========== -->
-        <div class="vertical-menu">
-
-            <div data-simplebar class="h-100">
-                <!--- Sidemenu -->
-                <div id="sidebar-menu">
-                    <!-- Left Menu Start -->
-                    <ul class="metismenu list-unstyled" id="side-menu">
-                        <li class="menu-title">General</li>
-
-                        <li>
-                            <a href="index.html" class="waves-effect">
-                                <i class="ri-dashboard-fill"></i>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="notification.html" class=" waves-effect">
-                                <i class="ri-notification-4-fill"></i>
-                                <span class="badge badge-pill badge-success float-right">38</span>
-                                <span>Notification</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="activites.html" class=" waves-effect">
-                                <i class="ri-flashlight-fill"></i>
-                                <span>Activities</span>
-                            </a>
-                        </li>
-
-                        <li><span class="menu-title">Boxes</span>
-                            <!-- <span class="badge badge-pill badge-success float-right my-1 mr-4" style="font-size:x-small;">2</span> -->
-                        </li>
-
-
-                        <li class="box-img">
-                            <a href="box-info.html" class=" waves-effect">
-                                <img src="assets/images/home/box-1.png" class="menu-box" alt="box">
-                                <span>My Home Box</span>
-                            </a>
-                        </li>
-
-                        <li class="box-img">
-                            <a href="javascript: void(0);" class="waves-effect">
-                                <img src="assets/images/home/box-2.png" class="menu-box" alt="box">
-                                <span>Tony's Box</span>
-                            </a>
-                        </li>
-
-                        <li class="text-center mt-5 refer">
-                            <div class="refer-friend">
-                                <a href="Refer&Earn.html">
-                                  <img src="assets/images/home/refer-friend.png" class="img-fluid" alt="">
-                                  <span>
-                                    <h5>Invite Your Friends</h5>
-                                    <i class="fas fa-long-arrow-alt-right" style="font-size: 3rem;"></i>
-                                  </span>
-                                </a> 
-                              </div>
-                            <div class="refer-icon d-none">
-                                <a href="faq.html" class=" waves-effect ">
-                                    <i class="ri-user-shared-fill"></i>
-                                    <span>Refer Friends</span>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="menu-style mt-2">
-                            <a href="faq.html" class=" waves-effect">
-                                <i class="ri-question-answer-fill"></i>
-                                <span>FAQ</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-style mt-2">
-                            <a href="support.html" class=" waves-effect">
-                                <i class="ri-customer-service-2-fill"></i>
-                                <span>Technical Support</span>
-                            </a>
-                        </li>
-
-                        <li class="social-menu-list mt-3">
-                            <a href="#" class=" vertical-social-icon waves-effect">
-                              <img class="social-media-icon" src="assets/images/home/social-media.png">
-                            </a>
-
-                            <ul class=" social-menu d-flex justify-content-center px-4 ">
-                                <li>
-                                    <a href="#" class=" waves-effect">
-                                        <i class="fab fa-facebook-f text-white"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class=" waves-effect">
-                                        <i class="fab fa-twitter text-white"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class=" waves-effect">
-                                        <i class="fab fa-linkedin-in text-white"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- After Hover Vertical Social Menu -->
-                            <div class="vertical-social-menu ">
-                                <ul class=" social-menu justify-content-center d-none">
-                                    <li>
-                                        <a href="#" class=" waves-effect">
-                                            <i class="fab fa-facebook-f text-white"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class=" waves-effect">
-                                            <i class="fab fa-twitter text-white"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class=" waves-effect">
-                                            <i class="fab fa-linkedin-in text-white"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+            <label style="font-size: medium;">Language</label>
+            <select class="vodiapicker">
+                <option value="en" class="test" data-thumbnail="assets/images/flags/united-states.png">English</option>
+                <option value="en" class="test" data-thumbnail="assets/images/flags/india.png">Hindi</option>
+                <option value="en" class="test" data-thumbnail="assets/images/flags/spain.png">Spanish</option>
+            </select>
+            <div class="lang-select">
+                <button class="btn-select" value=""></button>
+                <div class="b">
+                    <ul id="a"></ul>
                 </div>
-                <!-- Sidebar -->
             </div>
+
+            <!-- end page title -->
+            <!-- body box -->
+
         </div>
-        <!-- Left Sidebar End -->
+        <!--End container -->
+    </div>
+    <!--End page-content -->
+    <!-- layout-wrapper -->
 
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
-        <div id="Activity">
-            <div class="main-content">
-                <div class="page-content">
-                    <div class="container-fluid">
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12 mb-0">
-                                <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4>Settings And Preferences</h4>
-                                    <!-- <div class="searchbar float-right">
-                                        <input class="search_input" type="text" name="" placeholder="Search...">
-                                        <a href="#" class="search_icon"><i class="fas fa-search float-right"></i></a>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                         <label style="font-size: medium;">Language</label>
-                        <select class="vodiapicker">
-                            <option value="en" class="test" data-thumbnail="assets/images/flags/united-states.png">English</option>
-                            <option value="en" class="test" data-thumbnail="assets/images/flags/india.png">Hindi</option>
-                            <option value="en" class="test" data-thumbnail="assets/images/flags/spain.png">Spanish</option>
-                      </select>
-                        <div class="lang-select">
-                        <button class="btn-select" value=""></button>
-                        <div class="b">
-                        <ul id="a"></ul>
-                        </div>
-                        </div>
-                              
-                        <!-- end page title -->
-                        <!-- body box -->
-                        
-                    </div>
-                    <!--End container -->
-                </div>
-                <!--End page-content -->
-                <!-- footer -->
-                <footer class="footer login-footer">
-                    <div class="text-sm-center d-sm-block">
-                        <p>Fantum © 2021 - All Rights Reserved | <span><a href="#">Terms & Conditions</a></span> | <span><a
-                                    href="#">Privacy
-                                    Policy</a></span></p>
-                    </div>
-                </footer>
-            </div>
-            <!--End main-content -->
-        </div>
-    </div><!-- layout-wrapper -->
-    
     <!-- JAVASCRIPT -->
-    <!-- <script type='text/javascript'>
-        $(function(){
-        $('.selectpicker').selectpicker();
-        });
-      </script> -->
-	<script src="assets/libs/jquery/jquery.min.js"></script>
-	<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-	<script src="assets/libs/metismenu/metisMenu.min.js"></script>
-	<script src="assets/libs/simplebar/simplebar.min.js"></script>
-	<script src="assets/libs/node-waves/waves.min.js"></script>
-	<script src="assets/js/app.js"></script>
-	<script src="assets/js/custom.js"></script>
-    
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/custom.js"></script>
+
 </body>
 
 </html>
