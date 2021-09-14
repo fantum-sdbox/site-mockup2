@@ -9,6 +9,9 @@
     --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     --border-radius: 20px;
     --login-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --success-color: #1cbb8c;
+    --warning-color: #fcb92c;
+    --danger-color: #ff3d60;
 }
 
 .text-primary {
@@ -291,6 +294,47 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover {
 
 body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
     color: #000000;
+}
+
+
+/* Battery Color */
+
+.batteryOutline {
+    padding: 2px;
+    border: 2px solid var(--success-color);
+    border-radius: 5px;
+    width: 50px;
+    height: 20px;
+    position: relative;
+}
+
+.batteryInnerContainer {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    z-index: 5;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.batteryWarning {
+    border: 2px solid var(--warning-color);
+}
+
+.batteryDanger {
+    border: 2px solid var(--danger-color);
+}
+
+.progress-bar-success {
+    background-color: var(--success-color);
+}
+
+.progress-bar-warning {
+    background-color: var(--warning-color);
+}
+
+.progress-bar-danger {
+    background-color: var(--danger-color);
 }
 
 
@@ -1756,5 +1800,9 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .tag {
+    width: fit-content;
+}
+
+tag {
     width: fit-content;
 }
