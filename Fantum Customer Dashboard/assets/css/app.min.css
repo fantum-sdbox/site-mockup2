@@ -99,12 +99,16 @@
 }
 
 .header-item {
-    height: 70px;
+    margin-top: 5px;
+    height: 55px;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     color: #636e75;
     border: 0;
     border-radius: 0
+}
+.vertical-collpsed .header-item {
+    margin-top: 10px;
 }
 
 .header-item:hover {

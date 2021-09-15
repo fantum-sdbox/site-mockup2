@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/toasty.css" rel="stylesheet" />
+
+    <title>toasts</title>
+    <style>
+ body {
+    background: #eee
+}
+
+.btn {
+    margin-right: 0.5rem !important
+}
+
+.btn {
+    font-size: 0.875rem;
+    line-height: 1;
+    font-weight: 400;
+    padding: .7rem 1.5rem;
+    border-radius: 0.1275rem
+}
+
+.container {
+    margin-top: 100px
+}
+
+.toast {
+    transition: 0.32s all ease-in-out
+}
+
+.toast-container--fade {
+    right: 0;
+    bottom: 0
+}
+
+.toast-container--fade .toast-wrapper {
+    display: inline-block
+}
+
+.toast.fade-init {
+    opacity: 0
+}
+
+.toast.fade-show {
+    opacity: 1
+}
+
+.toast.fade-hide {
+    opacity: 0
+}
+    </style>
+</head>
+<body>
+    
+    
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center"> <button type="button" id="successtoast" class="btn btn-success btn-icon-text"> <i class="fa fa-check btn-icon-prepend"></i>Toast Notification success</button> <button type="button" id="infotoast" class="btn btn-info btn-icon-text"> <i class="fa fa-check btn-icon-prepend"></i>Toast Notification info</button> <button type="button" id="warningtoast" class="btn btn-warning btn-icon-text"> <i class="fa fa-check btn-icon-prepend"></i>Toast Notification warning</button> <button type="button" id="errortoast" class="btn btn-primary btn-icon-text"> <i class="fa fa-check btn-icon-prepend"></i>Toast Notification error</button> </div>
+        </div>
+    </div>
+    <!-- JAVASCRIPT -->
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/toasty.js"></script>
+    <script>
+   $(document).ready(function() {
+
+//success toast
+
+
+
+var options = {
+autoClose: true,
+progressBar: true,
+enableSounds: true,
+sounds: {
+
+info: "https://res.cloudinary.com/dxfq3iotg/video/upload/v1557233294/info.mp3",
+// path to sound for successfull message:
+success: "https://res.cloudinary.com/dxfq3iotg/video/upload/v1557233524/success.mp3",
+// path to sound for warn message:
+warning: "https://res.cloudinary.com/dxfq3iotg/video/upload/v1557233563/warning.mp3",
+// path to sound for error message:
+error: "https://res.cloudinary.com/dxfq3iotg/video/upload/v1557233574/error.mp3",
+},
+};
+
+var toast = new Toasty(options);
+toast.configure(options);
+
+
+
+
+
+$('#successtoast').click(function() {
+
+toast.success("Success! This toast notification with sound");
+
+});
+
+$('#infotoast').click(function() {
+
+toast.info("This toast notification with sound");
+
+});
+
+$('#warningtoast').click(function() {
+
+toast.warning("Warning! This toast notification with sound");
+
+});
+
+$('#errortoast').click(function() {
+
+toast.error("Error! This toast notification with sound");
+
+});
+
+});
+    </script>
+</body>
+</html>
+

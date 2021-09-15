@@ -1066,6 +1066,8 @@ h6 {
     border-radius: 20px;
     text-align: center;
     overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
