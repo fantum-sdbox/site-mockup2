@@ -62,6 +62,78 @@
             width: 150px;
         }
     </style>
+    <style>
+        .custom-select {
+            padding: 0;
+            padding-right: 20px;
+            position: relative;
+            border: 0;
+            height: 24px;
+        }
+        
+        .custom-select select {
+            display: none;
+        }
+        
+        .select-selected {
+            background-color: #fff;
+        }
+        
+        .select-selected:after {
+            position: absolute;
+            content: "";
+            top: 14px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-color: #fff transparent transparent transparent;
+        }
+        
+        .select-selected.select-arrow-active:after {
+            color: #000;
+            top: 7px;
+        }
+        
+        .select-items div,
+        .select-selected {
+            border-radius: 50px;
+            color: #000;
+            padding: 2px 16px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .select-items div {
+            height: 35px;
+            margin: 10px;
+            padding-top: 8px;
+        }
+        
+        .select-items {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 20px;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            width: 112%;
+            margin-left: -30px;
+            margin-top: 10px;
+        }
+        
+        .select-hide {
+            display: none;
+        }
+        
+        .select-items div:hover {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+        }
+        /* .select-items div:hover,
+        .same-as-selected {} */
+    </style>
 
 </head>
 
@@ -84,7 +156,7 @@
                     <div class="row">
                         <div class="col-md-4 text-center">
                             <div class='container-image'>
-                                <img id='confirm-img' src='assets/images/home/Rectangle 130.png'>
+                                <img id='confirm-img' src='assets/images/users/user.png'>
                             </div>
                             <div class='container-form'>
                                 <input id='selectedFile' class="disp-none" type='file' accept=".png, .jpg, .jpeg, .svg">
@@ -98,8 +170,8 @@
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="imageModal">Crop Image</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
                                         </div>
                                         <div class="modal-body modal-body1">
                                             <div id='crop-image-container'>
@@ -113,12 +185,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="profile-img text-center ">
-        <img id="profileImage" src="assets/images/home/Rectangle 130.png" alt="user">
-        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
-
-        <button class="btnOne text-truncate text-center mt-3">Change Profile Img</button>
-      </div> -->
                         </div>
 
                         <!-- General Section & Contact Section -->
@@ -147,7 +213,8 @@
                                         </div>
                                         <div class="form-row login-form mt-3">
                                             <div class="col ">
-                                                <label for="exampleInputEmail1" class="ml-2 font-size-14">Email address</label>
+                                                <label for="exampleInputEmail1" class="ml-2 font-size-14">Email
+                                                    address</label>
                                                 <div class="input-box form-icon" style="background-color:#55c5e347">
                                                     <i class="fas fa-envelope"></i>
                                                     <input type="email" placeholder="User13@stage.com" id="exampleInputEmail1" aria-describedby="emailHelp" style="background-color:#55c5e300" disabled>
@@ -157,8 +224,19 @@
                                             <div class="col">
                                                 <label for="number" class="ml-2 font-size-14">Contact Number</label>
                                                 <div class="input-box form-icon">
+
                                                     <i class="fas fa-phone-alt"></i>
-                                                    <input type="text" placeholder="+91 9584332365">
+                                                    <div class="custom-select" style="width: 80px;">
+                                                        <select>
+                                                            <a onclick="phoneNumber('phone','13')"><option value="0">+1
+                                                            </option></a>
+                                                            <a onclick="phoneNumber('phone','13')"><option value="1">+1
+                                                            </option></a>
+                                                            <a onclick="phoneNumber('phone2','10')"><option value="2">+91
+                                                            </option></a>
+                                                        </select>
+                                                    </div>
+                                                    <input id="phone" type="text" name="phone" placeholder="Phone Number" style="width: 70%;" maxlength="13" />
                                                 </div>
 
                                             </div>
@@ -188,10 +266,16 @@
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <label for="inputAddress" class="ml-2">State</label>
+                                        <label for="number" class="ml-2">State</label>
                                         <div class="input-box form-icon">
                                             <i class="fas fa-synagogue"></i>
-                                            <input type="search" id="inputAddress" placeholder="Maharashtra">
+                                            <div class="custom-select col-11">
+                                                <select>
+                                                    <option value="0">Select State</option>
+                                                    <option value="1">MH</option>
+                                                    <option value="2">KA</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -201,9 +285,17 @@
                                         <label for="number" class="ml-2">Country</label>
                                         <div class="input-box form-icon">
                                             <i class="fas fa-flag"></i>
-                                            <input type="text" placeholder="India">
+                                            <div class="custom-select col-11">
+                                                <select>
+                                                    <option value="0">Select Country</option>
+                                                    <option value="1">United State</option>
+                                                    <option value="2">India</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
+
+
                                     <div class="col-4 ">
                                         <label for="inputAddress" class="ml-2">Pin Code</label>
                                         <div class="input-box form-icon">
@@ -217,7 +309,7 @@
                             <div class="row mt-5 text-center">
                                 <div class="col">
                                     <button class="bttn btn-text-outline" data-toggle="modal" data-target="#ChangePswdModal">Change
-            Password</button>
+                                        Password</button>
 
                                     <button type="submit" class="btnOne ml-3">Submit</button>
                                 </div>
@@ -230,26 +322,28 @@
                                         <div class="modal-body">
                                             <div class="otp-modal container">
                                                 <h5 class="mb-4 text-center">Change Password</h5>
+
                                                 <label>Current Password:</label>
                                                 <div class="input-box form-icon mb-3">
-                                                    <input type="text" placeholder="Enter Current Password">
-                                                    <i class="far fa-eye"></i>
+                                                    <input type="password" placeholder="Enter Current Password" id="myCurretPassword" aria-describedby="ConfirmPasswordHelp">
+                                                    <span id="togglePassword" onclick="showPass('myCurretPassword','eyeClosed1')">
+                                                        <i id="eyeClosed1" class="fas fa-eye field-icon"></i>
+                                                    </span>
                                                 </div>
                                                 <label>New Password:</label>
                                                 <div class="input-box form-icon mb-3">
-                                                    <input type="text" placeholder="Enter New Password">
-                                                    <i class="far fa-eye"></i>
+                                                    <input type="password" placeholder="Enter New Password" id="myNewPassword" aria-describedby="ConfirmPasswordHelp">
+                                                    <span id="togglePassword" onclick="showPass('myNewPassword','eyeClosed2')">
+                                                        <i id="eyeClosed2" class="fas fa-eye field-icon"></i>
+                                                    </span>
                                                 </div>
                                                 <label>Confirm Password:</label>
                                                 <div class="input-box form-icon mb-3">
-                                                    <input type="text" placeholder="Enter Confirm Password">
-                                                    <i class="far fa-eye"></i>
+                                                    <input type="password" placeholder="Enter Confirm Password" id="myConfirmPassword" aria-describedby="ConfirmPasswordHelp">
+                                                    <span id="togglePassword" onclick="showPass('myConfirmPassword','eyeClosed3')">
+                                                        <i id="eyeClosed3" class="fas fa-eye field-icon"></i>
+                                                    </span>
                                                 </div>
-                                                <!-- <input class="Inputpswd" type="password" maxlength="15" >
-                <label >New Password:</label> 
-                <input class="Inputpswd" type="password" maxlength="15">
-                <label >Confirm Password:</label>
-                <input class="Inputpswd" type="password" maxlength="15"> -->
                                                 <div class="modaldonebtn text-center">
                                                     <button class="btnOne">Done</button>
                                                 </div>
@@ -335,6 +429,87 @@
                 $('.modal').modal('hide');
             });
         });
+    </script>
+    <script>
+        var x, i, j, l, ll, selElmnt, a, b, c;
+        /*look for any elements with the class "custom-select":*/
+        x = document.getElementsByClassName("custom-select");
+        l = x.length;
+        for (i = 0; i < l; i++) {
+            selElmnt = x[i].getElementsByTagName("select")[0];
+            ll = selElmnt.length;
+            /*for each element, create a new DIV that will act as the selected item:*/
+            a = document.createElement("DIV");
+            a.setAttribute("class", "select-selected");
+            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+            x[i].appendChild(a);
+            /*for each element, create a new DIV that will contain the option list:*/
+            b = document.createElement("DIV");
+            b.setAttribute("class", "select-items select-hide");
+            for (j = 1; j < ll; j++) {
+                /*for each option in the original select element,
+                create a new DIV that will act as an option item:*/
+                c = document.createElement("DIV");
+                c.innerHTML = selElmnt.options[j].innerHTML;
+                c.addEventListener("click", function(e) {
+                    /*when an item is clicked, update the original select box,
+                    and the selected item:*/
+                    var y, i, k, s, h, sl, yl;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sl = s.length;
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < sl; i++) {
+                        if (s.options[i].innerHTML == this.innerHTML) {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) {
+                                y[k].removeAttribute("class");
+                            }
+                            this.setAttribute("class", "same-as-selected");
+                            break;
+                        }
+                    }
+                    h.click();
+                });
+                b.appendChild(c);
+            }
+            x[i].appendChild(b);
+            a.addEventListener("click", function(e) {
+                /*when the select box is clicked, close any other select boxes,
+                and open/close the current select box:*/
+                e.stopPropagation();
+                closeAllSelect(this);
+                this.nextSibling.classList.toggle("select-hide");
+                this.classList.toggle("select-arrow-active");
+            });
+        }
+
+        function closeAllSelect(elmnt) {
+            /*a function that will close all select boxes in the document,
+            except the current select box:*/
+            var x, y, i, xl, yl, arrNo = [];
+            x = document.getElementsByClassName("select-items");
+            y = document.getElementsByClassName("select-selected");
+            xl = x.length;
+            yl = y.length;
+            for (i = 0; i < yl; i++) {
+                if (elmnt == y[i]) {
+                    arrNo.push(i)
+                } else {
+                    y[i].classList.remove("select-arrow-active");
+                }
+            }
+            for (i = 0; i < xl; i++) {
+                if (arrNo.indexOf(i)) {
+                    x[i].classList.add("select-hide");
+                }
+            }
+        }
+        /*if the user clicks anywhere outside the select box,
+        then close all select boxes:*/
+        document.addEventListener("click", closeAllSelect);
     </script>
 
 

@@ -23,106 +23,106 @@
 // });
 //common structure js 
 function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                    if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                    /*remove the attribute, and call this function once more:*/
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
         }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
     }
-  }
 };
 
 
 // slider
 $('.slider').slick({
-  dots: true,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  responsive: [{
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 2,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [{
+            breakpoint: 1025,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+    ]
 });
 
 
 //JavaScript function that enables or disables a submit button depending
 //on whether a checkbox has been ticked or not.
 function terms_changed(termsCheckBox) {
-  //If the checkbox has been checked
-  if (termsCheckBox.checked) {
-    //Set the disabled property to FALSE and enable the button.
-    document.getElementById("submit_button").disabled = false;
-  } else {
-    //Otherwise, disable the submit button.
-    document.getElementById("submit_button").disabled = true;
-  }
+    //If the checkbox has been checked
+    if (termsCheckBox.checked) {
+        //Set the disabled property to FALSE and enable the button.
+        document.getElementById("submit_button").disabled = false;
+    } else {
+        //Otherwise, disable the submit button.
+        document.getElementById("submit_button").disabled = true;
+    }
 }
 
 //  quantity box 
 function wcqib_refresh_quantity_increments() {
-  jQuery("div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)").each(function(a, b) {
-      var c = jQuery(b);
-      c.addClass("buttons_added"), c.children().first().before('<input type="button" value="-" class="minus" />'), c.children().last().after('<input type="button" value="+" class="plus" />')
-  })
+    jQuery("div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)").each(function(a, b) {
+        var c = jQuery(b);
+        c.addClass("buttons_added"), c.children().first().before('<input type="button" value="-" class="minus" />'), c.children().last().after('<input type="button" value="+" class="plus" />')
+    })
 }
 String.prototype.getDecimals || (String.prototype.getDecimals = function() {
-  var a = this,
-      b = ("" + a).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
-  return b ? Math.max(0, (b[1] ? b[1].length : 0) - (b[2] ? +b[2] : 0)) : 0
+    var a = this,
+        b = ("" + a).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+    return b ? Math.max(0, (b[1] ? b[1].length : 0) - (b[2] ? +b[2] : 0)) : 0
 }), jQuery(document).ready(function() {
-  wcqib_refresh_quantity_increments()
+    wcqib_refresh_quantity_increments()
 }), jQuery(document).on("updated_wc_div", function() {
-  wcqib_refresh_quantity_increments()
+    wcqib_refresh_quantity_increments()
 }), jQuery(document).on("click", ".plus, .minus", function() {
-  var a = jQuery(this).closest(".quantity").find(".qty"),
-      b = parseFloat(a.val()),
-      c = parseFloat(a.attr("max")),
-      d = parseFloat(a.attr("min")),
-      e = a.attr("step");
-  b && "" !== b && "NaN" !== b || (b = 0), "" !== c && "NaN" !== c || (c = ""), "" !== d && "NaN" !== d || (d = 0), "any" !== e && "" !== e && void 0 !== e && "NaN" !== parseFloat(e) || (e = 1), jQuery(this).is(".plus") ? c && b >= c ? a.val(c) : a.val((b + parseFloat(e)).toFixed(e.getDecimals())) : d && b <= d ? a.val(d) : b > 0 && a.val((b - parseFloat(e)).toFixed(e.getDecimals())), a.trigger("change")
+    var a = jQuery(this).closest(".quantity").find(".qty"),
+        b = parseFloat(a.val()),
+        c = parseFloat(a.attr("max")),
+        d = parseFloat(a.attr("min")),
+        e = a.attr("step");
+    b && "" !== b && "NaN" !== b || (b = 0), "" !== c && "NaN" !== c || (c = ""), "" !== d && "NaN" !== d || (d = 0), "any" !== e && "" !== e && void 0 !== e && "NaN" !== parseFloat(e) || (e = 1), jQuery(this).is(".plus") ? c && b >= c ? a.val(c) : a.val((b + parseFloat(e)).toFixed(e.getDecimals())) : d && b <= d ? a.val(d) : b > 0 && a.val((b - parseFloat(e)).toFixed(e.getDecimals())), a.trigger("change")
 });
 
 //=============================================flags===============================================
@@ -132,12 +132,12 @@ String.prototype.getDecimals || (String.prototype.getDecimals = function() {
 
 //test for iterating over child elements
 var langArray = [];
-$('.vodiapicker option').each(function(){
-  var img = $(this).attr("data-thumbnail");
-  var text = this.innerText;
-  var value = $(this).val();
-  var item = '<li><img src="'+ img +'" alt="" value="'+value+'"/><span>'+ text +'</span></li>';
-  langArray.push(item);
+$('.vodiapicker option').each(function() {
+    var img = $(this).attr("data-thumbnail");
+    var text = this.innerText;
+    var value = $(this).val();
+    var item = '<li><img src="' + img + '" alt="" value="' + value + '"/><span>' + text + '</span></li>';
+    langArray.push(item);
 })
 
 $('#a').html(langArray);
@@ -147,33 +147,33 @@ $('.btn-select').html(langArray[0]);
 $('.btn-select').attr('value', 'en');
 
 //change button stuff on click
-$('#a li').click(function(){
-   var img = $(this).find('img').attr("src");
-   var value = $(this).find('img').attr('value');
-   var text = this.innerText;
-   var item = '<li><img src="'+ img +'" alt="" /><span>'+ text +'</span></li>';
-  $('.btn-select').html(item);
-  $('.btn-select').attr('value', value);
-  $(".b").toggle();
-  //console.log(value);
+$('#a li').click(function() {
+    var img = $(this).find('img').attr("src");
+    var value = $(this).find('img').attr('value');
+    var text = this.innerText;
+    var item = '<li><img src="' + img + '" alt="" /><span>' + text + '</span></li>';
+    $('.btn-select').html(item);
+    $('.btn-select').attr('value', value);
+    $(".b").toggle();
+    //console.log(value);
 });
 
-$(".btn-select").click(function(){
-        $(".b").toggle();
-    });
+$(".btn-select").click(function() {
+    $(".b").toggle();
+});
 
 //check local storage for the lang
 var sessionLang = localStorage.getItem('lang');
-if (sessionLang){
-  //find an item with value of sessionLang
-  var langIndex = langArray.indexOf(sessionLang);
-  $('.btn-select').html(langArray[langIndex]);
-  $('.btn-select').attr('value', sessionLang);
+if (sessionLang) {
+    //find an item with value of sessionLang
+    var langIndex = langArray.indexOf(sessionLang);
+    $('.btn-select').html(langArray[langIndex]);
+    $('.btn-select').attr('value', sessionLang);
 } else {
-   var langIndex = langArray.indexOf('ch');
-  console.log(langIndex);
-  $('.btn-select').html(langArray[langIndex]);
-  //$('.btn-select').attr('value', 'en');
+    var langIndex = langArray.indexOf('ch');
+    console.log(langIndex);
+    $('.btn-select').html(langArray[langIndex]);
+    //$('.btn-select').attr('value', 'en');
 }
 
 //====== Profile page============
@@ -186,3 +186,55 @@ if (sessionLang){
 // widget.onUploadComplete(fileInfo => {
 //   preview.src = fileInfo.cdnUrl;
 // });
+
+// OTP feild
+
+$(document).ready(function() {
+    $('input').keyup(function() {
+        if ($(this).val().length == $(this).attr("maxlength")) {
+            $(this).next().focus();
+        }
+    });
+});
+
+// Password Feild Eye button
+
+function showPass(myTextFeildId, myIconID) {
+    var x = document.getElementById(myTextFeildId);
+    var y = document.getElementById(myIconID);
+    if (x.type === "password") {
+        x.type = "text";
+        y.className = "fas fa-eye-slash field-icon";
+    } else {
+        x.type = "password";
+        y.className = "fas fa-eye field-icon";
+    }
+}
+
+
+
+// Phone Number Formate Change
+
+function phoneNumber(myName, myMaxlength) {
+    var ph = document.getElementById("phone");
+    console.log(ph);
+    ph.setAttribute("name", myName);
+    ph.setAttribute("maxlength", myMaxlength);
+}
+
+
+// US Mobile Number Format
+
+$("input[name='phone']").keyup(function() {
+    $(this).val($(this).val().replace(/^(\d{3})(\d{3})(\d+)$/, "($1)$2-$3"));
+});
+//====================== box-info toggle content ==========================
+function HideShowFunction() {
+  var x = document.getElementById("hide-showToggle");
+      
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
