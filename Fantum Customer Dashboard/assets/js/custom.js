@@ -186,3 +186,14 @@ if (sessionLang){
 // widget.onUploadComplete(fileInfo => {
 //   preview.src = fileInfo.cdnUrl;
 // });
+
+//====================== box-info toggle content ==========================
+function HideShowFunction() {
+  var x = document.getElementById("hide-showToggle");
+      
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
