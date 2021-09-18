@@ -228,3 +228,13 @@ function phoneNumber(myName, myMaxlength) {
 $("input[name='phone']").keyup(function() {
     $(this).val($(this).val().replace(/^(\d{3})(\d{3})(\d+)$/, "($1)$2-$3"));
 });
+//====================== box-info toggle content ==========================
+function HideShowFunction() {
+  var x = document.getElementById("hide-showToggle");
+      
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
