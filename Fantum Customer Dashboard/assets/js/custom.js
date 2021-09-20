@@ -238,3 +238,12 @@ function HideShowFunction() {
     x.style.display = "none";
   }
 }
+function PermanentHideShow() {
+    var x = document.getElementById("Permanent-hide-showToggle");
+        
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }

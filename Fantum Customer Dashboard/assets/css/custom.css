@@ -14,6 +14,12 @@
     --danger-color: #ff3d60;
 }
 
+.error_color{
+    color: #B71C1C;
+}
+.sms_failed{
+    color: #FF6F00;
+}
 .text-primary {
     color: var(--primary-color) !important;
 }
@@ -70,7 +76,7 @@ a {
 }
 
 .btn-text-outline {
-    border: 2px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     background-color: transparent;
     color: var(--primary-color);
     transition: all 0.2s ease-in-out;
@@ -78,8 +84,8 @@ a {
 }
 
 .btn-text-outline:hover {
-    border: 3px solid var(--primary-color);
-    font-size: 16px;
+    border: 4px solid var(--primary-color);
+    font-size: 15px;
 }
 
 .btnOne {
@@ -673,8 +679,11 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
 
 .cus-datatable span i {
     color: var(--primary-color);
+    font-size: 30px;
 }
-
+.cus-datatable span .Auth_Admin_icon{
+    font-size: 35px !important;
+}
 .page-item.active .page-link {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -955,7 +964,9 @@ Subscription Details
 .accordion>.card>.card-header {
     border-radius: var(--border-radius) !important;
 }
-
+#subscription-card .card>.card-header {
+    border-radius: 15px !important;
+}
 .accordion>.card:not(:last-of-type) {
     border-bottom: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
@@ -1008,7 +1019,6 @@ Subscription Details
     padding-right: 20px;
     margin-bottom: 20px;
 }
-
 
 /* FAQ */
 
@@ -1193,13 +1203,12 @@ label {
     font-size: small;
 }
 
-#SettingsModal .border-style {
+.border-style {
     width: 100%;
     height: 1px;
     background-color: #ccc;
     margin-bottom: 3%;
 }
-
 #SettingsModal a {
     color: #55C5E3;
     margin-left: 18%;
@@ -1628,6 +1637,9 @@ th {
 .tooltip.bs-tooltip-right .arrow:before {
     border-right-color: #55C5E3 !important;
 }
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: #55C5E3 !important;
+}
 
 
 /* support modal */
@@ -1721,6 +1733,14 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .box-info-card .owner-detail {
     margin-top: -6px;
     width: 100%;
+}
+#pills-tabContent .menu-box {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(85, 196, 229, 0.33);
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .cus-dropdown .dropdown-menu {
@@ -1818,7 +1838,156 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .tag {
     width: fit-content;
 }
+/* subscription pg */
 
-tag {
-    width: fit-content;
+
+.subcri-btn .btnOne{
+    padding-top: 8px;
 }
+.subcri-btn .btn-text-outline{
+    padding-top: 5px;
+}
+.subcri-btn .btn-text-outline :hover {
+    color:  var(--primary-color);
+}
+.subcri-plan-card{
+    min-width: 200px;
+    min-height:110px;
+    background-color:var(--primary-color);
+    border-radius: 10px !important;
+}
+.subcri-plan-card .card-body h5, h6, strike{
+    color: white !important;
+}
+
+
+  /* blue rounded checkbox  */
+  .container-Bluecheckbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: -2px;
+    
+  }
+  
+ 
+  .container-Bluecheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border:2px solid rgb(196, 195, 195);
+  border-radius: 15px;
+  }
+  
+  .container-Bluecheckbox:hover input ~ .checkmark {
+    background-color: white;
+  }
+  
+  .container-Bluecheckbox input:checked ~ .checkmark {
+    background-color: #55C5E3;
+    border:3px solid white;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container-Bluecheckbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container-Bluecheckbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* black rounded checkbox */
+.container-Blackcheckbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: -3px;
+  }
+  
+ 
+  .container-Blackcheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .Blackcheckbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #e0eef1;
+    border:3px solid black;
+  border-radius: 15px;
+  }
+  
+  
+  
+  .container-Blackcheckbox input:checked ~ .checkmark {
+    background-color: #e0eef1;
+    border:3px solid black;
+  }
+  
+  .Blackcheckbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container-Blackcheckbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container-Blackcheckbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

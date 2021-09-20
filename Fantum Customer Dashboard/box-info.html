@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <title>Fantum</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- DataTables -->
   <!-- <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" /> -->
   <!-- <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" /> -->
@@ -85,15 +85,15 @@
 
                   <!-- ./MOdal Button -->
                   <!-- Subscription -->
-                  <a href="subsription.html" data-toggle="tooltip" data-placement="top" title="Subsription"><button
+                  <a href="subscriptionOptions.html" data-toggle="tooltip" data-placement="top" title="Subscription"><button
                       class="box-round-btn spin circle mr-3"><i class="fas fa-dollar-sign"></i></button></a>
                   <!-- ./Subscription -->
-                  <!-- dropdown Button-->
-                  <div class="dropdown cus-dropdown">
-                    <button class="round-btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i>
+                  
+                  <div data-toggle="tooltip" data-placement="top" title="Settings">
+                    <button class="round-btn dropdown-toggle" data-toggle="modal"
+                    data-target="#SettingsModal"><i class="fas fa-sliders-h"></i>
                     </button>
-                    <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                    <!-- <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                       <li class="dropdown-submenu">
                         <a class="dropdown-item" tabindex="-1" href="#">Issue IC Cards</a>
                         <ul class="dropdown-menu">
@@ -105,10 +105,9 @@
                       <li class="dropdown-divider"></li>
                       <li class="dropdown-item"><a href="#" data-toggle="modal"
                           data-target="#SettingsModal">Settings</a></li>
-                      <!-- <li class="dropdown-item"><a class="text-danger" href="#">Delete Box</a></li> -->
-                    </ul>
+                    </ul> -->
                   </div>
-                  <!-- ./dropdown -->
+                  
 
                 </div>
                 <!--Settings Modal -->
@@ -287,7 +286,6 @@
               <div class=" d-flex justify-content-end">
                 <button class="btnOne font-size-13 text-truncate">Remote Lock</button>
               </div>
-              <!--Set Admin Modal -->
               <div class="modal fade" id="EditInfoModal" data-backdrop="static" style="z-index: 1600;">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
@@ -941,7 +939,7 @@
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                               </button>
-                              <h3>Send Passcode: Recuring</h3>
+                              <h3>Send Passcode: Recurring</h3>
                               <p>The passcode MUST BE used at least once,Within 24 Hours from current time.or it will be
                                 SUSPENEDED for security reasons.
                               </p>
@@ -1111,11 +1109,11 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="fas fa-user-circle"></i></span></td>
                           <td> Test Key</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
                           <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
-                          <td> Ekey User</td>
+                          <td> Owner</td>
                           <td>Permanent</td>
                           <td class="text-center">Daily</td>
                           <td>
@@ -1137,19 +1135,38 @@
                                     <div class="modal-body">
                                       <div class="container">
                                         <h3>Edit E-key</h3>
-                                        <div class="form-row justify-content-between">
+                                        <div class="form-row justify-content-between mt-4">
                                           <div class="form-group col-md-5">
                                             <label for="E-KeyName">E-Key Name</label>
                                             <input type="text" id="E-KeyName" class="form-control "
-                                              aria-describedby="Name" placeholder="Enter Name" disabled>
+                                              aria-describedby="Name" placeholder="Enter Name">
                                           </div>
                                           <div class="form-group col-md-5">
-                                            <label for="IssuedDate">Issued Date</label>
-                                            <input type="text" id="IssuedDate" class="form-control "
-                                              aria-describedby="Name" placeholder="Enter a Recipient Account mail"
-                                              disabled>
+                                            <label for="Validity">Validity</label>
+                                            <div class="form-group d-flex justify-content-between">
+                                              <label for="Authorize">Permanent</label>
+                                              <label class="switch">
+                                                <input type="checkbox" onclick="PermanentHideShow()">
+                                                <span class="toggle_btn round"></span>
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <div id="Permanent-hide-showToggle" style="display:none">
+                                            <div class="subcrip-sec-box form-row justify-content-between">
+                                              <div class="form-group col-md-5 ">
+                                                <label for="start-time">Start Time</label>
+                                                <input type="datetime-local" id="start-time" name="start-time"
+                                                  placeholder="Start Time" value="2021-07-12T19:30">
+                                              </div>
+                                              <div class="form-group col-md-5">
+                                                <label for="End-time">End Time</label>
+                                                <input type="datetime-local" id="End-time" name="End-time" placeholder="End Time"
+                                                  value="2021-07-12T19:30">
+                                              </div>
+                                            </div>
                                           </div>
                                         </div>
+                                        <div class="border-style"></div>
                                         <div class="form-row justify-content-between">
                                           <div class="form-group col-md-5">
                                             <label for="ValidTill">Valid Till</label>
@@ -1164,9 +1181,10 @@
                                         </div>
                                         <div class="form-row justify-content-between">
                                           <div class="form-group col-md-5">
-                                            <label for="Validity">Validity</label>
-                                            <input type="text" id="Validity" class="form-control "
-                                              aria-describedby="Name" placeholder="Enter Validity Period" disabled>
+                                            <label for="IssuedDate">Issued Date</label>
+                                            <input type="text" id="IssuedDate" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter a Recipient Account mail"
+                                              disabled>
                                           </div>
                                           <div class="form-group col-md-5">
                                             <label for="RecurringMode">Recurring Mode</label>
@@ -1174,6 +1192,23 @@
                                               aria-describedby="Name" placeholder="Enter Status" disabled>
                                           </div>
                                         </div>
+                                        <div class="border-style"></div>
+                                        <div class="form-row justify-content-between">
+                                          <div class="form-group col-md-5 d-flex justify-content-between">
+                                            <label for="Enable">Enable</label>
+                                            <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <span class="toggle_btn round"></span>
+                                            </label>
+                                          </div>
+                                          <div class="form-group col-md-5 d-flex justify-content-between">
+                                            <label for="Authorize">Authorize</label>
+                                            <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <span class="toggle_btn round"></span>
+                                            </label>
+                                          </div>
+                                        </div>
                                         <div class="d-flex flex-row justify-content-end  mt-3">
                                           <button class="btnOne">done</button>
                                         </div>
@@ -1183,14 +1218,151 @@
                                 </div>
                               </div>
                               <!--end Edit Modal -->
-                              <a href="#">
+                              <a href="#" data-toggle="modal" data-target="#EkeyDeleteModal">
+                                <li><i class="fas fa-trash-alt"></i></li>
+                              </a>
+                              <!-- Delete Modal -->
+                              <div class="modal fade" id="EkeyDeleteModal">
+                                <div class="modal-dialog modal-dialog-centered">
+                                  <div class="modal-content">
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                      <div class="container">
+                                        <h3 style="font-weight: 700;">Are you sure?</h3>
+                                        <p class="mt-3">Do You want delete this E-Key?</p>
+                                        <div class="d-flex justify-content-end mt-4">
+                                          <button class="btnOne" style="min-width: 100px;">Yes</button>
+                                          <button class="btnOne ml-3" style="min-width: 100px;">No</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--end Delete Modal -->
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><span><i class="material-icons Auth_Admin_icon">
+                            supervised_user_circle</i></span></td>
+                          <td> Test Key</td>
+                          <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                          <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                          <td> Authorized Admin</td>
+                          <td>Permanent</td>
+                          <td class="text-center">Daily</td>
+                          <td>
+                            <ul class="list-unstyled d-flex table-icon justify-content-center">
+
+                              <!-- <a onclick="copyToClipboard('#datatable-info')">
+                                  <li><i class="fas fa-copy"></i>hi</li>
+                                </a> -->
+
+                              <a href="#" data-toggle="modal" data-target="#EditModal">
+                                <li data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i>
+                                </li>
+                              </a>
+                              <!-- Edit Modal -->
+                              <div class="modal fade" id="EditModal">
+                                <div class="modal-dialog modal-dialog-centered">
+                                  <div class="modal-content">
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                      <div class="container">
+                                        <h3>Edit E-key</h3>
+                                        <div class="form-row justify-content-between mt-4">
+                                          <div class="form-group col-md-5">
+                                            <label for="E-KeyName">E-Key Name</label>
+                                            <input type="text" id="E-KeyName" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter Name">
+                                          </div>
+                                          <div class="form-group col-md-5">
+                                            <label for="Validity">Validity</label>
+                                            <div class="form-group d-flex justify-content-between">
+                                              <label for="Authorize">Permanent</label>
+                                              <label class="switch">
+                                                <input type="checkbox" onclick="PermanentHideShow()">
+                                                <span class="toggle_btn round"></span>
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <div id="Permanent-hide-showToggle" style="display:none">
+                                            <div class="subcrip-sec-box form-row justify-content-between">
+                                              <div class="form-group col-md-5 ">
+                                                <label for="start-time">Start Time</label>
+                                                <input type="datetime-local" id="start-time" name="start-time"
+                                                  placeholder="Start Time" value="2021-07-12T19:30">
+                                              </div>
+                                              <div class="form-group col-md-5">
+                                                <label for="End-time">End Time</label>
+                                                <input type="datetime-local" id="End-time" name="End-time" placeholder="End Time"
+                                                  value="2021-07-12T19:30">
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="border-style"></div>
+                                        <div class="form-row justify-content-between">
+                                          <div class="form-group col-md-5">
+                                            <label for="ValidTill">Valid Till</label>
+                                            <input type="text" id="ValidTill" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter Assigner" disabled>
+                                          </div>
+                                          <div class="form-group col-md-5">
+                                            <label for="AccessType">Access Type</label>
+                                            <input type="text" id="AccessType" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter Assigner Time" disabled>
+                                          </div>
+                                        </div>
+                                        <div class="form-row justify-content-between">
+                                          <div class="form-group col-md-5">
+                                            <label for="IssuedDate">Issued Date</label>
+                                            <input type="text" id="IssuedDate" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter a Recipient Account mail"
+                                              disabled>
+                                          </div>
+                                          <div class="form-group col-md-5">
+                                            <label for="RecurringMode">Recurring Mode</label>
+                                            <input type="text" id="RecurringMode" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter Status" disabled>
+                                          </div>
+                                        </div>
+                                        <div class="border-style"></div>
+                                        <div class="form-row justify-content-between">
+                                          <div class="form-group col-md-5 d-flex justify-content-between">
+                                            <label for="Enable">Enable</label>
+                                            <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <span class="toggle_btn round"></span>
+                                            </label>
+                                          </div>
+                                          <div class="form-group col-md-5 d-flex justify-content-between">
+                                            <label for="Authorize">Authorize</label>
+                                            <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <span class="toggle_btn round"></span>
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-end  mt-3">
+                                          <button class="btnOne">done</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--end Edit Modal -->
+                              <a href="#" data-toggle="modal" data-target="#EkeyDeleteModal">
                                 <li><i class="fas fa-trash-alt"></i></li>
                               </a>
                             </ul>
                           </td>
                         </tr>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="material-icons">
+                            vpn_key</i></span></td>
                           <td> Test Key</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
                           <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
@@ -1262,93 +1434,14 @@
                                 </div>
                               </div>
                               <!--end Edit Modal -->
-                              <a href="#">
+                              <a href="#" data-toggle="modal" data-target="#EkeyDeleteModal">
                                 <li><i class="fas fa-trash-alt"></i></li>
                               </a>
                             </ul>
                           </td>
                         </tr>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                          <td> Test Key</td>
-                          <td class="text-turncate">29 AUG 2021 01.54 PM</td>
-                          <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
-                          <td> Ekey User</td>
-                          <td>Permanent</td>
-                          <td class="text-center">Daily</td>
-                          <td>
-                            <ul class="list-unstyled d-flex table-icon justify-content-center">
-
-                              <!-- <a onclick="copyToClipboard('#datatable-info')">
-                                  <li><i class="fas fa-copy"></i>hi</li>
-                                </a> -->
-
-                              <a href="#" data-toggle="modal" data-target="#EditModal">
-                                <li data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i>
-                                </li>
-                              </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="EditModal">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                      <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <!--end Edit Modal -->
-                              <a href="#">
-                                <li><i class="fas fa-trash-alt"></i></li>
-                              </a>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><img src="assets/images/home/box_placeholder.png" class="menu-box" alt="box"></span></td>
                           <td> Test Key</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
                           <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
@@ -1372,42 +1465,79 @@
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                       <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
+                                        <h3>Edit E-key</h3>
+                                        <div class="form-row justify-content-between mt-4">
                                           <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
+                                            <label for="E-KeyName">E-Key Name</label>
+                                            <input type="text" id="E-KeyName" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter Name">
                                           </div>
                                           <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
+                                            <label for="Validity">Validity</label>
+                                            <div class="form-group d-flex justify-content-between">
+                                              <label for="Authorize">Permanent</label>
+                                              <label class="switch">
+                                                <input type="checkbox" onclick="PermanentHideShow()">
+                                                <span class="toggle_btn round"></span>
+                                              </label>
+                                            </div>
+                                          </div>
+                                          <div id="Permanent-hide-showToggle" style="display:none">
+                                            <div class="subcrip-sec-box form-row justify-content-between">
+                                              <div class="form-group col-md-5 ">
+                                                <label for="start-time">Start Time</label>
+                                                <input type="datetime-local" id="start-time" name="start-time"
+                                                  placeholder="Start Time" value="2021-07-12T19:30">
+                                              </div>
+                                              <div class="form-group col-md-5">
+                                                <label for="End-time">End Time</label>
+                                                <input type="datetime-local" id="End-time" name="End-time" placeholder="End Time"
+                                                  value="2021-07-12T19:30">
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="border-style"></div>
+                                        <div class="form-row justify-content-between">
+                                          <div class="form-group col-md-5">
+                                            <label for="ValidTill">Valid Till</label>
+                                            <input type="text" id="ValidTill" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter Assigner" disabled>
+                                          </div>
+                                          <div class="form-group col-md-5">
+                                            <label for="AccessType">Access Type</label>
+                                            <input type="text" id="AccessType" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter Assigner Time" disabled>
                                           </div>
                                         </div>
                                         <div class="form-row justify-content-between">
                                           <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
+                                            <label for="IssuedDate">Issued Date</label>
+                                            <input type="text" id="IssuedDate" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter a Recipient Account mail"
+                                              disabled>
                                           </div>
                                           <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
+                                            <label for="RecurringMode">Recurring Mode</label>
+                                            <input type="text" id="RecurringMode" class="form-control "
+                                              aria-describedby="Name" placeholder="Enter Status" disabled>
                                           </div>
                                         </div>
+                                        <div class="border-style"></div>
                                         <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
+                                          <div class="form-group col-md-5 d-flex justify-content-between">
+                                            <label for="Enable">Enable</label>
+                                            <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <span class="toggle_btn round"></span>
+                                            </label>
                                           </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
+                                          <div class="form-group col-md-5 d-flex justify-content-between">
+                                            <label for="Authorize">Authorize</label>
+                                            <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <span class="toggle_btn round"></span>
+                                            </label>
                                           </div>
                                         </div>
                                         <div class="d-flex flex-row justify-content-end  mt-3">
@@ -1419,14 +1549,14 @@
                                 </div>
                               </div>
                               <!--end Edit Modal -->
-                              <a href="#">
+                              <a href="#" data-toggle="modal" data-target="#EkeyDeleteModal">
                                 <li><i class="fas fa-trash-alt"></i></li>
                               </a>
                             </ul>
                           </td>
                         </tr>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><img src="assets/images/home/box_placeholder.png" class="menu-box" alt="box"></span></td>
                           <td> Test Key</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
                           <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
@@ -1497,7 +1627,7 @@
                                 </div>
                               </div>
                               <!--end Edit Modal -->
-                              <a href="#">
+                              <a href="#" data-toggle="modal" data-target="#EkeyDeleteModal">
                                 <li><i class="fas fa-trash-alt"></i></li>
                               </a>
                             </ul>
@@ -1535,7 +1665,8 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="material-icons">
+                            lock</i></span></td>
                           <td> Test Passcode</td>
                           <td>852716#</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
@@ -1549,71 +1680,57 @@
                               <a href="#">
                                 <li><i class="fas fa-copy"></i></li>
                               </a>
-                              <a href="#" data-toggle="modal" data-target="#PasscodeEditModal">
-                                <li><i class="fas fa-edit"></i></li>
+                              <a href="#"data-toggle="modal" data-target="#PasscodeDeleteModal">
+                                <li><i class="fas fa-trash-alt"></i></li>
                               </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="PasscodeEditModal">
+                              <!-- Delete Modal -->
+                              <div class="modal fade" id="PasscodeDeleteModal">
                                 <div class="modal-dialog modal-dialog-centered">
                                   <div class="modal-content">
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                       <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
+                                        <h3 style="font-weight: 700;">Are you sure?</h3>
+                                        <p class="mt-3">Do You want delete this Passcode?</p>
+                                        <div class="d-flex justify-content-end mt-4">
+                                          <button class="btnOne" style="min-width: 100px;">Yes</button>
+                                          <button class="btnOne ml-3" style="min-width: 100px;">No</button>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <!--end Edit Modal -->
+                              <!--end Delete Modal -->
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><span><i class="material-icons">
+                            lock</i></span></td>
+                          <td> Test Passcode</td>
+                          <td>852716#</td>
+                          <td class="text-turncate">29 AUG 2021 01.54 PM</td>
+                          <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
+                          <td>20:00 - 21:00</td>
+                          <td>Permanent</td>
+                          <td>Daily</td>
+                          <td>
+                            <ul class="list-unstyled d-flex table-icon justify-content-center">
+
                               <a href="#">
+                                <li><i class="fas fa-copy"></i></li>
+                              </a>
+                              
+                              <a href="#"data-toggle="modal" data-target="#PasscodeDeleteModal">
                                 <li><i class="fas fa-trash-alt"></i></li>
                               </a>
                             </ul>
                           </td>
                         </tr>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="material-icons">
+                            lock</i></span></td>
                           <td> Test Passcode</td>
                           <td>852716#</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
@@ -1627,71 +1744,15 @@
                               <a href="#">
                                 <li><i class="fas fa-copy"></i></li>
                               </a>
-                              <a href="#" data-toggle="modal" data-target="#PasscodeEditModal">
-                                <li><i class="fas fa-edit"></i></li>
-                              </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="PasscodeEditModal">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                      <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <!--end Edit Modal -->
-                              <a href="#">
+                              <a href="#"data-toggle="modal" data-target="#PasscodeDeleteModal">
                                 <li><i class="fas fa-trash-alt"></i></li>
                               </a>
                             </ul>
                           </td>
                         </tr>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="material-icons">
+                            lock</i></span></td>
                           <td> Test Passcode</td>
                           <td>852716#</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
@@ -1705,71 +1766,15 @@
                               <a href="#">
                                 <li><i class="fas fa-copy"></i></li>
                               </a>
-                              <a href="#" data-toggle="modal" data-target="#PasscodeEditModal">
-                                <li><i class="fas fa-edit"></i></li>
-                              </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="PasscodeEditModal">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                      <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <!--end Edit Modal -->
-                              <a href="#">
+                              <a href="#"data-toggle="modal" data-target="#PasscodeDeleteModal">
                                 <li><i class="fas fa-trash-alt"></i></li>
                               </a>
                             </ul>
                           </td>
                         </tr>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="material-icons">
+                            lock</i></span></td>
                           <td> Test Passcode</td>
                           <td>852716#</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
@@ -1783,142 +1788,7 @@
                               <a href="#">
                                 <li><i class="fas fa-copy"></i></li>
                               </a>
-                              <a href="#" data-toggle="modal" data-target="#PasscodeEditModal">
-                                <li><i class="fas fa-edit"></i></li>
-                              </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="PasscodeEditModal">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                      <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <!--end Edit Modal -->
-                              <a href="#">
-                                <li><i class="fas fa-trash-alt"></i></li>
-                              </a>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
-                          <td> Test Passcode</td>
-                          <td>852716#</td>
-                          <td class="text-turncate">29 AUG 2021 01.54 PM</td>
-                          <td class="text-turncate"> 29 AUG 2021 01.54 PM</td>
-                          <td>20:00 - 21:00</td>
-                          <td>Permanent</td>
-                          <td>Daily</td>
-                          <td>
-                            <ul class="list-unstyled d-flex table-icon justify-content-center">
-
-                              <a href="#">
-                                <li><i class="fas fa-copy"></i></li>
-                              </a>
-                              <a href="#" data-toggle="modal" data-target="#PasscodeEditModal">
-                                <li><i class="fas fa-edit"></i></li>
-                              </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="PasscodeEditModal">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                      <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <!--end Edit Modal -->
-                              <a href="#">
+                              <a href="#"data-toggle="modal" data-target="#PasscodeDeleteModal">
                                 <li><i class="fas fa-trash-alt"></i></li>
                               </a>
                             </ul>
@@ -1952,377 +1822,167 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="material-icons mr-2 ">credit_card</i></span></td>
                           <td>Test ICCard</td>
                           <td>37268975368</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
                           <td>Permanent</td>
                           <td>
                             <ul class="list-unstyled d-flex table-icon justify-content-center">
-
-                              <a href="#">
-                                <li><i class="fas fa-copy"></i></li>
+                              <a href="#"data-toggle="modal" data-target="#ICCardsDeleteModal">
+                                <li><i class="fas fa-trash-alt"></i></li>
                               </a>
-                              <a href="#" data-toggle="modal" data-target="#ICCardEditModal">
-                                <li><i class="fas fa-edit"></i></li>
-                              </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="ICCardEditModal">
+                              <!-- Delete Modal -->
+                              <div class="modal fade" id="ICCardsDeleteModal">
                                 <div class="modal-dialog modal-dialog-centered">
                                   <div class="modal-content">
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                       <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
+                                        <h3 style="font-weight: 700;">Are you sure?</h3>
+                                        <p class="mt-3">Do You want delete this ICCards?</p>
+                                        <div class="d-flex justify-content-end mt-4">
+                                          <button class="btnOne" style="min-width: 100px;">Yes</button>
+                                          <button class="btnOne ml-3" style="min-width: 100px;">No</button>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <!--end Edit Modal -->
-                              <a href="#">
-                                <li><i class="fas fa-trash-alt"></i></li>
-                              </a>
+                              <!--end Delete Modal -->
                             </ul>
                           </td>
                         </tr>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="material-icons mr-2 ">credit_card</i></span></td>
                           <td>Test ICCard</td>
                           <td>37268975368</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
                           <td>Permanent</td>
                           <td>
                             <ul class="list-unstyled d-flex table-icon justify-content-center">
-
-                              <a href="#">
-                                <li><i class="fas fa-copy"></i></li>
+                              <a href="#"data-toggle="modal" data-target="#ICCardsDeleteModal">
+                                <li><i class="fas fa-trash-alt"></i></li>
                               </a>
-                              <a href="#" data-toggle="modal" data-target="#ICCardEditModal">
-                                <li><i class="fas fa-edit"></i></li>
-                              </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="ICCardEditModal">
+                              <!-- Delete Modal -->
+                              <div class="modal fade" id="ICCardsDeleteModal">
                                 <div class="modal-dialog modal-dialog-centered">
                                   <div class="modal-content">
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                       <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
+                                        <h3 style="font-weight: 700;">Are you sure?</h3>
+                                        <p class="mt-3">Do You want delete this ICCards?</p>
+                                        <div class="d-flex justify-content-end mt-4">
+                                          <button class="btnOne" style="min-width: 100px;">Yes</button>
+                                          <button class="btnOne ml-3" style="min-width: 100px;">No</button>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <!--end Edit Modal -->
-                              <a href="#">
-                                <li><i class="fas fa-trash-alt"></i></li>
-                              </a>
+                              <!--end Delete Modal -->
                             </ul>
                           </td>
                         </tr>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="material-icons mr-2 ">credit_card</i></span></td>
                           <td>Test ICCard</td>
                           <td>37268975368</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
                           <td>Permanent</td>
                           <td>
                             <ul class="list-unstyled d-flex table-icon justify-content-center">
-
-                              <a href="#">
-                                <li><i class="fas fa-copy"></i></li>
+                              <a href="#"data-toggle="modal" data-target="#ICCardsDeleteModal">
+                                <li><i class="fas fa-trash-alt"></i></li>
                               </a>
-                              <a href="#" data-toggle="modal" data-target="#ICCardEditModal">
-                                <li><i class="fas fa-edit"></i></li>
-                              </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="ICCardEditModal">
+                              <!-- Delete Modal -->
+                              <div class="modal fade" id="ICCardsDeleteModal">
                                 <div class="modal-dialog modal-dialog-centered">
                                   <div class="modal-content">
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                       <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
+                                        <h3 style="font-weight: 700;">Are you sure?</h3>
+                                        <p class="mt-3">Do You want delete this ICCards?</p>
+                                        <div class="d-flex justify-content-end mt-4">
+                                          <button class="btnOne" style="min-width: 100px;">Yes</button>
+                                          <button class="btnOne ml-3" style="min-width: 100px;">No</button>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <!--end Edit Modal -->
-                              <a href="#">
-                                <li><i class="fas fa-trash-alt"></i></li>
-                              </a>
+                              <!--end Delete Modal -->
                             </ul>
                           </td>
                         </tr>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="material-icons mr-2 ">credit_card</i></span></td>
                           <td>Test ICCard</td>
                           <td>37268975368</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
                           <td>Permanent</td>
                           <td>
                             <ul class="list-unstyled d-flex table-icon justify-content-center">
-
-                              <a href="#">
-                                <li><i class="fas fa-copy"></i></li>
+                              <a href="#"data-toggle="modal" data-target="#ICCardsDeleteModal">
+                                <li><i class="fas fa-trash-alt"></i></li>
                               </a>
-                              <a href="#" data-toggle="modal" data-target="#ICCardEditModal">
-                                <li><i class="fas fa-edit"></i></li>
-                              </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="ICCardEditModal">
+                              <!-- Delete Modal -->
+                              <div class="modal fade" id="ICCardsDeleteModal">
                                 <div class="modal-dialog modal-dialog-centered">
                                   <div class="modal-content">
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                       <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
+                                        <h3 style="font-weight: 700;">Are you sure?</h3>
+                                        <p class="mt-3">Do You want delete this ICCards?</p>
+                                        <div class="d-flex justify-content-end mt-4">
+                                          <button class="btnOne" style="min-width: 100px;">Yes</button>
+                                          <button class="btnOne ml-3" style="min-width: 100px;">No</button>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <!--end Edit Modal -->
-                              <a href="#">
-                                <li><i class="fas fa-trash-alt"></i></li>
-                              </a>
+                              <!--end Delete Modal -->
                             </ul>
                           </td>
                         </tr>
                         <tr>
-                          <td class="text-center"><span><i class="fas fa-lock mr-2 "></i></span></td>
+                          <td class="text-center"><span><i class="material-icons mr-2 ">credit_card</i></span></td>
                           <td>Test ICCard</td>
                           <td>37268975368</td>
                           <td class="text-turncate">29 AUG 2021 01.54 PM</td>
                           <td>Permanent</td>
                           <td>
                             <ul class="list-unstyled d-flex table-icon justify-content-center">
-
-                              <a href="#">
-                                <li><i class="fas fa-copy"></i></li>
+                              <a href="#"data-toggle="modal" data-target="#ICCardsDeleteModal">
+                                <li><i class="fas fa-trash-alt"></i></li>
                               </a>
-                              <a href="#" data-toggle="modal" data-target="#ICCardEditModal">
-                                <li><i class="fas fa-edit"></i></li>
-                              </a>
-                              <!-- Edit Modal -->
-                              <div class="modal fade" id="ICCardEditModal">
+                              <!-- Delete Modal -->
+                              <div class="modal fade" id="ICCardsDeleteModal">
                                 <div class="modal-dialog modal-dialog-centered">
                                   <div class="modal-content">
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                       <div class="container">
-                                        <h3>All Information</h3>
-
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Name</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Name">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Recipient Account</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter a Recipient Account mail">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Assigner Time</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Assigner Time">
-                                          </div>
-                                        </div>
-                                        <div class="form-row justify-content-between">
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Validity Period</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Validity Period">
-                                          </div>
-                                          <div class="form-group col-md-5">
-                                            <label for="Name">Status</label>
-                                            <input type="text" id="Name" class="form-control " aria-describedby="Name"
-                                              placeholder="Enter Status">
-                                          </div>
-                                        </div>
-                                        <div class="d-flex flex-row justify-content-end  mt-3">
-                                          <button class="btnOne">done</button>
+                                        <h3 style="font-weight: 700;">Are you sure?</h3>
+                                        <p class="mt-3">Do You want delete this ICCards?</p>
+                                        <div class="d-flex justify-content-end mt-4">
+                                          <button class="btnOne" style="min-width: 100px;">Yes</button>
+                                          <button class="btnOne ml-3" style="min-width: 100px;">No</button>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <!--end Edit Modal -->
-                              <a href="#">
-                                <li><i class="fas fa-trash-alt"></i></li>
-                              </a>
+                              <!--end Delete Modal -->
                             </ul>
                           </td>
                         </tr>

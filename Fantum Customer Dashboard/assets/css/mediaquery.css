@@ -49,7 +49,7 @@
   .modal-dialog {
     max-width: 750px;
   }
-#TechnicalSupportModal .modal-dialog {
+#ContactUsModal .modal-dialog {
   max-width: 300px;
   border-radius: 50px;
 }
@@ -70,6 +70,9 @@
 #SetAdminModal .modal-dialog {
   max-width: 450px;
   box-shadow: rgba(99, 99, 99, 0.2) ;
+}
+#pills-tabContent .modal-dialog {
+  max-width: 350px;
 }
 }
 
