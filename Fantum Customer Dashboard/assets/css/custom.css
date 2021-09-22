@@ -20,6 +20,9 @@
 .sms_failed{
     color: #FF6F00;
 }
+.icons-size{
+    font-size: 20px;
+}
 .text-primary {
     color: var(--primary-color) !important;
 }
@@ -673,7 +676,9 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
     padding: 5px;
     min-width: fit-content;
 }
-
+.notification-tab td>span{
+    text-transform: uppercase;
+}
 
 /* Box Info */
 
@@ -1511,7 +1516,7 @@ label {
 
 #a li span,
 .btn-select li span {
-    margin-left: 20px;
+    margin-left: 18px;
     margin-right: 20px;
 }
 

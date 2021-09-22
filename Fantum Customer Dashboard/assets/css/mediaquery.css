@@ -48,6 +48,10 @@
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 750px;
+    color: #000000;
+  }
+  .modal-dialog h3{
+    color: #000000;
   }
 #ContactUsModal .modal-dialog {
   max-width: 300px;
@@ -71,8 +75,9 @@
   max-width: 450px;
   box-shadow: rgba(99, 99, 99, 0.2) ;
 }
-#pills-tabContent .modal-dialog {
+#EkeyDeleteModal .modal-dialog {
   max-width: 350px;
+  color: #000000;
 }
 }
 
