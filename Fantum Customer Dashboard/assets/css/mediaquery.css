@@ -79,6 +79,10 @@
   max-width: 350px;
   color: #000000;
 }
+#AddCardInfoModal .modal-dialog {
+  max-width: 450px;
+  border-radius: 50px;
+}
 }
 
 

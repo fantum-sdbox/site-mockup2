@@ -24,12 +24,15 @@
     <!-- Icons Css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Login -->
+    <link rel="stylesheet" href="assets/css/login.css">
     <!-- Media Query -->
     <link rel="stylesheet" href="assets/css/mediaquery.css">
     <!-- Slick -->
@@ -289,13 +292,13 @@
         <!-- Start right Content here -->
         <!-- ============================================================== -->
         <div class="main-content">
-            <div class="page-content" id="Subscribe">
+            <div class="page-content" id="subscription">
                 <div class="container-fluid">
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-flex align-items-center ">
-                                <h4 class="mb-0">Subscribe</h4>
+                                <h4 class="mb-0">Subscription</h4>
 
                             </div>
                         </div>
@@ -318,10 +321,39 @@
                                                         <span>Permanent</span>
                                                     </p>
                                                     <h5 class="text-primary m-0">Home Delivery Box</h5>
-                                                    <p class="font-size-14 mt-4"><b>Abcd Colony,</b> Pune, Maharashtra,
+                                                    <p class="font-size-14"><b>Abcd Colony,</b> Pune, Maharashtra,
                                                         <br>India
                                                     </p>
+                                                    <p class="mb-0 font-size-13" Style="margin-top: 15px;">
+                                                        Subscription Valid Till - 12 Mar 2021</p>
+                                                    <div class="card-btn mb-0">
+                                                        <button class="btn btn-gradient text-truncate">
+                                                            Remote Accessibility Available
+                                                        </button>
+                                                    </div>
                                                 </div>
+                                                <div class="card-btn d-flex justify-content-end">
+                                                    <div class="row icons ">
+                                                        <div class="batteryOutline batterySuccess mr-2">
+                                                            <div class="progress" style=" height:13px">
+                                                                <div class="progress-bar progress-bar-success"
+                                                                    role="progressbar" aria-valuenow="60"
+                                                                    aria-valuemin="0" aria-valuemax="100"
+                                                                    style="width:60%; ">
+                                                                </div>
+                                                            </div>
+                                                            <div class="batteryInnerContainer">
+                                                                <b style="color: #333333;">60%</b>
+                                                            </div>
+                                                        </div>
+                                                        <i class="fas fa-wifi"></i>
+                                                    </div>
+                                                    <div class="remote-icon ">
+                                                        <img src="assets/images/home/remote-icon.png" alt="">
+                                                    </div>
+                                                </div>
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -332,195 +364,218 @@
 
                         <div class="col-xl-6">
                             <div class="row">
-                                <div class="col-lg-12 mx-auto">
-                                    <div id="subscription-card">
-                                        <div class="card card-border ">
-                                            <div class="card-header bg-white shadow-sm ">
-                                                <li class="d-flex justify-content-between mt-1">
-                                                    <p style="font-weight: 700;" class="mb-0"><i
-                                                            class="fas fa-circle mr-3 text-black-50"></i>Terms &
-                                                        Conditions</p>
-                                                    <p class="text-right mb-0"><i class="far fa-eye" data-toggle="modal"
-                                                            data-target="#TermsAndConditionsModal"></i></p>
-                                                </li>
+                                <div class="col-md-12">
+                                    <div class="card card-border sub-card" style="height: 201px;">
+                                        <div class="card-body" style="padding-right: inherit;">
+                                            <h5 class="mt-1">Box Subscription Plan</h5>
+                                            <div class="row subcription-detail">
+                                                <div class="col-md-6 ">
+                                                    <div class="col-md-12  subcri-btn form-inline mt-4">
+                                                        <button class="btnOne mr-3"
+                                                            onclick="window.location.href='#'">Manage Plan</button>
+                                                        <button class="bttn btn-text-outline mr-3 mt-3"
+                                                            onclick="window.location.href='#'">Cancel Plan</button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 rounded-green">
+                                                    <img src="/Fantum Customer Dashboard/assets/images/subscriptons/Order_delivered.svg"
+                                                        style="width: 80%; margin-top: 12%; margin-left: 12%;">
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div><!-- End -->
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 mx-auto">
-                                    <div id="subscription-card">
-                                        <div class="card card-border ">
-                                            <div class="card-header bg-white shadow-sm ">
-                                                <li class="d-flex justify-content-between mt-1">
-                                                    <p style="font-weight: 700;" class="mb-0"><i
-                                                            class="fas fa-circle mr-3 text-black-50"></i>Cancellation
-                                                        Policy</p>
-                                                    <p class="text-right mb-0"><i class="far fa-eye" data-toggle="modal"
-                                                            data-target="#CancellationPolicyModal"></i></p>
-                                                </li>
-                                            </div>
-                                        </div>
-                                    </div><!-- End -->
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="Blackcheckbox ml-3">
-                                    <label class="container-Blackcheckbox">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <h5 style="font-weight: 700; margin-left: 10px;">I agree to the Terms & Conditions and Cancellation Policy</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="TermsAndConditionsModal" data-backdrop="static">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <h5 style="font-weight: 700;">Terms & Conditions</h5>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies
-                                            integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies
-                                            leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam
-                                            in arcu cursus euismod. Dictum fusce ut placerat orci nulla. Tincidunt
-                                            ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl
-                                            nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi
-                                            quis hendrerit dolor magna eget. Nullam eget felis eget nunc lobortis.
-                                            Faucibus ornare suspendisse sed nisi. Sagittis eu volutpat odio facilisis
-                                            mauris sit amet massa. Erat velit scelerisque in dictum non consectetur a
-                                            erat. Amet nulla facilisi morbi tempus iaculis urna. Egestas purus viverra
-                                            accumsan in nisl. Feugiat in ante metus dictum at tempor commodo. Convallis
-                                            tellus id interdum velit laoreet. Proin sagittis nisl rhoncus mattis rhoncus
-                                            urna neque viverra. Viverra aliquet eget sit amet tellus cras adipiscing
-                                            enim eu. Ut faucibus pulvinar elementum integer enim neque volutpat ac
-                                            tincidunt. Dui faucibus in ornare quam. In iaculis nunc sed augue lacus
-                                            viverra vitae congue. Vitae tempus quam pellentesque nec nam aliquam sem et.
-                                            Ut morbi tincidunt augue interdum. Sem fringilla ut morbi tincidunt augue.
-                                            Morbi enim nunc faucibus a pellentesque sit amet porttitor eget. In est ante
-                                            in nibh mauris. Nam aliquam sem et tortor consequat id porta nibh. Diam quis
-                                            enim lobortis scelerisque fermentum dui faucibus. Non curabitur gravida arcu
-                                            ac. Magna fringilla urna porttitor rhoncus dolor. Aenean et tortor at risus
-                                            viverra adipiscing. Dignissim sodales ut eu sem. Quam quisque id diam vel
-                                            quam elementum pulvinar etiam non. Eleifend quam adipiscing vitae proin
-                                            sagittis. Enim facilisis gravida neque convallis a cras semper. Risus
-                                            commodo viverra maecenas accumsan. Sit amet porttitor eget dolor morbi non
-                                            arcu risus.Ultrices eros in</p>
-                                        <div class="text-center">
-                                            <button class="btnOne">Done</button>
-                                        </div>
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="CancellationPolicyModal" data-backdrop="static">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <h5 style="font-weight: 700;">Cancellation Policy</h5>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies
-                                            integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies
-                                            leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam
-                                            in arcu cursus euismod. Dictum fusce ut placerat orci nulla. Tincidunt
-                                            ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl
-                                            nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi
-                                            quis hendrerit dolor magna eget. Nullam eget felis eget nunc lobortis.
-                                            Faucibus ornare suspendisse sed nisi. Sagittis eu volutpat odio facilisis
-                                            mauris sit amet massa. Erat velit scelerisque in dictum non consectetur a
-                                            erat. Amet nulla facilisi morbi tempus iaculis urna. Egestas purus viverra
-                                            accumsan in nisl. Feugiat in ante metus dictum at tempor commodo. Convallis
-                                            tellus id interdum velit laoreet. Proin sagittis nisl rhoncus mattis rhoncus
-                                            urna neque viverra. Viverra aliquet eget sit amet tellus cras adipiscing
-                                            enim eu. Ut faucibus pulvinar elementum integer enim neque volutpat ac
-                                            tincidunt. Dui faucibus in ornare quam. In iaculis nunc sed augue lacus
-                                            viverra vitae congue. Vitae tempus quam pellentesque nec nam aliquam sem et.
-                                            Ut morbi tincidunt augue interdum. Sem fringilla ut morbi tincidunt augue.
-                                            Morbi enim nunc faucibus a pellentesque sit amet porttitor eget. In est ante
-                                            in nibh mauris. Nam aliquam sem et tortor consequat id porta nibh. Diam quis
-                                            enim lobortis scelerisque fermentum dui faucibus. Non curabitur gravida arcu
-                                            ac. Magna fringilla urna porttitor rhoncus dolor. Aenean et tortor at risus
-                                            viverra adipiscing. Dignissim sodales ut eu sem. Quam quisque id diam vel
-                                            quam elementum pulvinar etiam non. Eleifend quam adipiscing vitae proin
-                                            sagittis. Enim facilisis gravida neque convallis a cras semper. Risus
-                                            commodo viverra maecenas accumsan. Sit amet porttitor eget dolor morbi non
-                                            arcu risus.Ultrices eros in</p>
-                                        <div class="text-center">
-                                            <button class="btnOne">Done</button>
-                                        </div>
 
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
+
                     <!-- subscription-card -->
-                    <div class="col-xl-12">
-                        <div class="row">
-                            <div class="card card-border" style="height: 201px;">
-                                <div class="card-body">
-                                    <h5 class="mt-1" style="font-weight: 700;">Trial Subscription Details</h5>
-                                    <div class="row">
-                                        <div class="col-md-9">
-                                            <p>Our Trial offering is a great opportunity for new members to enjoy
-                                                Premium feature prior to becoming a paid member. Your trial period will
-                                                end on Fri, Sep 2, 2022 and you will be charged $ 36.99.<br><br>
-                                                All plans offer unlimited remote locking and unlocking of box from any
-                                                authorized access point. Availability is subject to your carrier/IPS
-                                                wifi connectivity, strength and bandwidth.</p>
-                                        </div>
+                    <div class="row">
+                        <div class="col-xl-12 pr-0">
+                            <div class="card card-border sub-card" style="height: 200px;">
+                                <div class="card-body ">
+                                    <div class="row mt-2">
                                         <div class="col-md-3">
+                                            <h5 style="font-weight: 700;">Current Plan Imformation</h5>
                                             <div class="card card-border subcri-plan-card">
                                                 <div class="card-body pb-0">
-                                                   <div class="d-flex justify-content-between"> 
-                                                       <h5>Annual</h5>
-                                                       <label class="container-Bluecheckbox">
-                                                            <input type="checkbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                   </div>
-                                                   <div class="d-flex justify-content-between mt-4 mb-0"> 
-                                                    <h6 class="mt-2">Amount</h6>
-                                                    <div class="row">
-                                                        <i class="fas fa-dollar-sign text-white mr-2 mt-1" style= "font-size: 25px;"></i>
-                                                        <strike class="mt-2 mr-2">36.00</strike><h6 style= "font-size: 25px;">0.00</h6>
+                                                    <div class="d-flex justify-content-between">
+                                                        <h5>Annual</h5>
+                                                        
                                                     </div>
-                                                   </div>
+                                                    <div class="d-flex justify-content-between mt-4 mb-0">
+                                                        <h6 class="mt-2">Amount</h6>
+                                                        <div class="row">
+                                                            <i class="fas fa-dollar-sign text-white mr-2 mt-1"
+                                                                style="font-size: 25px;"></i>
+                                                            <strike class="mt-2 mr-2">36.00</strike>
+                                                            <h6 style="font-size: 25px;">0.00</h6>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-md-3 mt-5 ml-5" style="line-height: 0.8;">
+                                            <p>Status :<span class="ml-1" style="font-weight: 700;">Trial</span></p>
+                                            <p>Trial Ends On :<span class="ml-1" style="font-weight: 700;">Fri, Sep
+                                                    2022</span></p>
+                                            <p>Credit Balance :<span class="ml-1" style="font-weight: 700;">$0.0</span>
+                                            </p>
+
+                                        </div>
+                                        <div class="col-md-4 ml-4">
+                                            <div class="card card-border subscri-credit-card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-mg-3 credit-card-icon">
+                                                            <img
+                                                                src="/Fantum Customer Dashboard/assets/images/subscriptons/mastercard.png">
+                                                        </div>
+                                                        <div class="col-mg-6">
+                                                            <p style="font-weight: 700; margin: 15px; color: black;">
+                                                                **** **** **** 4556</p>
+                                                        </div>
+                                                        <div class="col-mg-3" style="margin-left: 90px; display:none;">
+                                                            <label class="container-Blackcheckbox " >
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </div>
+                                                        <a href="#"
+                                                            style="color: #55C5E3; font-weight: 700;margin-left: 65px; margin-top: 20px;">UPDATE
+                                                            CARD</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
-
                     </div>
+                    <!-- datatable -->
+                    <div class="row">
+                        <div class="col-md-12">
 
-                    
+                            <div class="cus-datatable mt-3 mb-5 ">
+                                <!-- Datatable -->
+                                <table id="datatable-buttons"
+                                    class="table table-striped dt-responsive nowrap rounded-table"
+                                    style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>Purchase Date</th>
+                                            <th>Invoice No.</th>
+                                            <th>Plan</th>
+                                            <th>Amount</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>11 Apr 2021</td>
+                                            <td>8668979-756</td>
+                                            <td class="text-turncate">Monthly</td>
+                                            <td>$56875</td>
+                                            <td>
+                                                <ul class="list-unstyled d-flex table-icon justify-content-center">
+                                                    <a href="#">
+                                                        <li> <i class="far fa-eye"></i></li>
+                                                    </a>
+                                                    <a href="#">
+                                                        <li><i class="material-icons">
+                                                            file_download</i></li>
+                                                    </a>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11 Apr 2021</td>
+                                            <td>8668979-756</td>
+                                            <td class="text-turncate">Monthly</td>
+                                            <td>$56875</td>
+                                            <td>
+                                                <ul class="list-unstyled d-flex table-icon justify-content-center">
+                                                    <a href="#">
+                                                        <li> <i class="far fa-eye"></i></li>
+                                                    </a>
+                                                    <a href="#">
+                                                        <li><i class="material-icons">
+                                                            file_download</i></li>
+                                                    </a>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11 Apr 2021</td>
+                                            <td>8668979-756</td>
+                                            <td class="text-turncate">Monthly</td>
+                                            <td>$56875</td>
+                                            <td>
+                                                <ul class="list-unstyled d-flex table-icon justify-content-center">
+                                                    <a href="#">
+                                                        <li> <i class="far fa-eye"></i></li>
+                                                    </a>
+                                                    <a href="#">
+                                                        <li><i class="material-icons">
+                                                            file_download</i></li>
+                                                    </a>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11 Apr 2021</td>
+                                            <td>8668979-756</td>
+                                            <td class="text-turncate">Monthly</td>
+                                            <td>$56875</td>
+                                            <td>
+                                                <ul class="list-unstyled d-flex table-icon justify-content-center">
+                                                    <a href="#">
+                                                        <li> <i class="far fa-eye"></i></li>
+                                                    </a>
+                                                    <a href="#">
+                                                        <li><i class="material-icons">
+                                                            file_download</i></li>
+                                                    </a>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11 Apr 2021</td>
+                                            <td>8668979-756</td>
+                                            <td class="text-turncate">Monthly</td>
+                                            <td>$56875</td>
+                                            <td>
+                                                <ul class="list-unstyled d-flex table-icon justify-content-center">
+                                                    <a href="#">
+                                                        <li> <i class="far fa-eye"></i></li>
+                                                    </a>
+                                                    <a href="#">
+                                                        <li><i class="material-icons">
+                                                            file_download</i></li>
+                                                    </a>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                    <div class="row text-center mt-3 mb-5 " style="justify-content: center;
-                    display: grid;">
-                        <div class="col-md-12  subcri-btn form-inline ">
-                            <button class="bttn btn-text-outline mr-3" onclick="window.location.href='subscription.html'"> Back</button>
-                            <button class="btnOne" onclick="window.location.href='subscription-payment.html'">Next</button>
-                           
+                                <!-- Datatable -->
+                            </div>
                         </div>
                     </div>
+
+
+
+                    <!-- <div class="row text-center mt-3 mb-5 " style="justify-content: center;
+                    display: grid;">
+                        <div class="col-md-12  subcri-btn form-inline ">
+                            <button class="btnOne mr-3" onclick="window.location.href='#'">ok</button>
+                        </div>
+                    </div> -->
 
 
                     <!-- ./Accordion -->
